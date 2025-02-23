@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start_vps": "kill -9 $(lsof -t -i:7801) && next start -p 7801",
+    "kill_process": "kill -9 $(lsof -t -i:7801)",
+    "start_vps": "next start -p 7801",
     "lint": "next lint"
   },
   "dependencies": {
