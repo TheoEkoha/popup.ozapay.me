@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start_vps": "next start -p 1338",
     "lint": "next lint"
   },
   "dependencies": {
