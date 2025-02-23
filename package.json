@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start_vps": "next start -p 1338",
+    "start_vps": "kill -9 $(lsof -t -i:7801) && next start -p 7801",
     "lint": "next lint"
   },
   "dependencies": {
@@ -44,3 +44,10 @@
     "eslint-config-next": "12.1.1"
   }
 }
+
+
+
+
+
+
+
