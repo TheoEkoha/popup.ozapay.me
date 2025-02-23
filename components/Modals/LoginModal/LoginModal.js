@@ -343,7 +343,7 @@ export default function LoginModal({isOpenRest}) {
         // setSucessCodeEmail(true);
         setNoButtonMail(true);
         setIsEmailSend(true)
-        setSeconds(1)
+        setSeconds(60)
       } catch (error) {
         handleAxiosError(error);
       }
@@ -361,7 +361,7 @@ export default function LoginModal({isOpenRest}) {
 
       // setNoButtonMail(true);
       // setIsEmailSend(true)
-      setSeconds(1)
+      setSeconds(60)
       setTextResendMail(true)
     } catch (error) {
       setPhoneResponseError("Une erreur est survenue.");
@@ -431,7 +431,7 @@ export default function LoginModal({isOpenRest}) {
     setPhone(event.target.value);
   };
   const onSubmitRegisterPhone = async (data1) => {
-    setSeconds(1)
+    setSeconds(60)
     let phoneNumber = `+${phone}`;
 
     let indicatif = phoneNumber.substr(0, 4);
@@ -477,7 +477,7 @@ export default function LoginModal({isOpenRest}) {
             { headers: { "Content-Type": "application/json" } }
         );
 
-        setSeconds(1)
+        setSeconds(60)
         setTextResendPhone(true)
         // setNoButtonPhone(true);
         // setIsSMSSend(true);
