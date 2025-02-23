@@ -1,0 +1,74 @@
+
+
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .php8 .phtml
+  AddType x-mapp-php5 .php
+  AddHandler x-mapp-php5 .php
+  AddType x-mapp-php8 .php
+  AddHandler x-mapp-php8 .php
+</IfModule>
+
+#RewriteRule  ^ozacoin - [L]
+#RewriteCond %{HTTP:Accept-Language} (fr) [NC]
+#RewriteCond %{REQUEST_URI} !^/picture/ozacoin.png
+##Rediriger l'utilisateur vers /de/
+##Redirection de type 301 (permanente)
+## Répertoire de redirection 301
+#RewriteRule (.*) https://fr.ozalentour.com/ [R=301,L]
+##Redirect 301 / https://fr.ozalentour.com/
+
+#RewriteCond %{HTTP:Accept-Language} (en) [NC]
+##Rediriger l'utilisateur vers /de/
+##Redirection de type 301 (permanente)
+#RewriteRule (.*) https://en.ozalentour.com/ [R=301,L]
+##Redirect  301 / https://en.ozalentour.com/
+
+#RewriteCond %{HTTP:Accept-Language} (es) [NC]
+##Rediriger l'utilisateur vers /de/
+##Redirection de type 301 (permanente)
+#RewriteRule (.*) https://esp.ozalentour.com/ [R=301,L]
+
+#RewriteCond %{HTTP:Accept-Language} (de) [NC]
+##Rediriger l'utilisateur vers /de/
+##Redirection de type 301 (permanente)
+#RewriteRule (.*) https://de.ozalentour.com/ [R=301,L]
+Redirect 301 /placement-token https://fr.ozalentour.com/support-token
+# Empêcher l'accès au fichier .htaccess
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# activer gzip
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch \bMSIE\s(7|8) !no-gzip !gzip-only-text/html
+
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|ico)$ no-gzip dont-vary
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/js
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/atom_xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-font-woff
+AddOutputFilterByType DEFLATE application/x-font-opentype
+
+</IfModule>
+
+# Configuration CAPTCHA
+AddHandler application/x-httpd-php .html
+SetEnv RECAPTCHA_PUBLIC_KEY 6LcvktobAAAAAG7Ujf4yV-CGqvj1oKOQmVFbipXO
+SetEnv RECAPTCHA_PRIVATE_KEY 6LcvktobAAAAALaitDXQxzYz3VpLo10kk85ZzpLh
+
+

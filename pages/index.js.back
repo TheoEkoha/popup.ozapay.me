@@ -1,0 +1,268 @@
+import Head from "next/head";
+import styles from "../styles/Index.module.css";
+import { useContext, useState, useEffect } from "react";
+import { DataContext } from "../components/Context";
+import axios from "axios";
+import Rgpd from "../components/Modals/RGPD/Rgpd";
+import Count from "../components/Modals/Count/Count";
+import { getCookie, setCookies } from "cookies-next";
+import Link from "next/link";
+import Crisp from "crisp-sdk-web"; // Import the Crisp SDK
+
+export default function Home() {
+  const { loginModal, setLoginModal, menu, rgpd, setRgpd, availableModal, setAvailableModal, showCountModal, setShowCountModal } = useContext(DataContext);
+
+  const [showCountModalTimer, setShowCountModalTimer] = useState(false);
+  const [loadImage, setLoadImage] = useState(true);
+  const [rgpdCookie, setRGPDCookie] = useState(false);
+
+  function NotAvailableModal() {
+    setAvailableModal(true);
+  }
+
+  useEffect(() => {
+    const getRGPD = async () => {
+      let checkRGPD = await getCookie("CookieRgpd");
+      checkRGPD ? setRGPDCookie(true) : null;
+    };
+
+    setTimeout(() => setLoadImage(false), 1000);
+    getRGPD();
+
+    
+  }, [rgpd]);
+
+  function Test() {
+    axios.get(`https://apin92.ozalentour.com/downloadApplication`).then(function (response) {
+      console.log(response);
+    });
+  }
+
+
+  return (
+    <>
+            <Head>
+  <title>{"Ozalentour - La Super App de Paiement"}</title>
+  <meta name="description" content="Un compte IBAN, une CB, des Revenus et de multiples services exceptionnels pour 0€/mois, c'est possible !"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <meta name="keywords" content="Ozalentour, Super App de Paiement, Super App, Moteur de Proximité, App de paiement locale, App de paiement sociale"/>
+  <meta property="og:url" content="https://fr.ozalentour.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ozalentour - La Super App de Paiement" />
+  <meta property="og:description" content="Un compte IBAN, une CB, des Revenus et de multiples services exceptionnels pour 0€/mois, c'est possible !" />
+  <meta property="og:site_name" content="Ozalentour®" />
+  <meta property="og:image" content="https://fr.ozalentour.com/public/hotlink-ok/home.jpg"/>
+  <meta property="og:image:secure_url" content="https://fr.ozalentour.com/public/hotlink-ok/home.jpg"/>
+  <meta property="og:image:type" content="image/jpg" />
+  <meta property="og:image:alt" content="La Super App de Paiement" />
+  <meta property="fb:app_id" content="2500591266698535" />
+  <meta property="article:publisher" content="https://www.facebook.com/Ozalentourfr/" />
+  <meta name="twitter:site" content="@ozalentour"/>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ozalentour - La Super App de Paiement" />
+  <meta name="twitter:description" content="n compte IBAN, une CB, des Revenus et de multiples services exceptionnels pour 0€/mois, c'est possible !" />
+  <meta name="twitter:image" content="https://fr.ozalentour.com/public/hotlink-ok/home.jpg"/>
+  <meta name="twitter:image:alt" content="La Super App de Paiement"/>
+  <meta name="trustpilot-one-time-domain-verification-id" content="dbc1fe36-c533-43ca-8bfa-e5df4a7499ac"/>
+  <link rel="shortcut icon" href="/public/favicon.ico" />
+	 
+      </Head>
+       {!rgpdCookie ? <Rgpd /> 
+       : null}
+      <div className={styles.homeContainer}>
+        <div className={styles.presentation}>
+          <div className={styles.container}>
+            <h1>
+              {"Une Super App de Paiement, Un RIB, une CB et du Cashback jusqu'à 70% !"}
+            </h1>
+            <p className={styles.desktopText}>
+              {"Essayez notre version de démonstration et Participez au développement d'une économie solidaire !"}
+            </p>
+			
+               <div className={styles.storeButtons}>
+				<a href="https://oza.band/Android"  className={styles.boxSocialMedia} download>
+					<img src="googleplay.png"/>
+					<div>
+						<p>Télécharger la démo</p>
+						<p>pour Android</p>
+					</div>
+				</a>
+				<a href="https://oza.band/apple" className={styles.boxSocialMedia} download>
+					<img src="applestore.webp"/>
+					<div>
+						<p>Télécharger la démo</p>
+						<p>pour IOS</p>
+					</div>
+				</a>
+              </div>
+          </div>
+        </div>
+        <img
+          className={styles.phonePreview}
+          src="phone.png"
+          alt="phone-preview"
+        />
+	    {/*
+        <img
+          className={styles["ozpIcon"] + " " + styles["ozpFirstIcon"]}
+          src="OZAPHYRE-LOGO-OFFICIEL 1.png"
+        />
+        <img
+          className={styles["ozpIcon"] + " " + styles["ozpSecondIcon"]}
+          src="OZAPHYRE-LOGO-OFFICIEL 2.png"
+        />
+        <img
+          className={styles["ozpIcon"] + " " + styles["ozpThirdIcon"]}
+          src="OZAPHYRE-LOGO-OFFICIEL 3.png"
+        />
+		*/}
+        <div className={styles.howDoesItWork}>
+          <div className={styles.container}>
+			<div className={styles.ldTitle}>
+            	<h2> {"Comment ça marche ?"}</h2>
+            	<p>
+              		{"Rejoignez notre super app Ozalentour, acceptez les paiements et gagnez un revenu complémentaire après chaque nouvelle expérience !"}
+            	</p>
+            </div>
+            <div className={styles.explanationCardContainer}>
+              <div className={styles.explanationCard}>
+                <img src="join.png" alt="compte social ozalentour" />
+                <h3>{"Rejoignez Ozalentour"}</h3>
+                <p>
+                  {
+                    "Ouvrez votre compte social Ozalentour et essayez la démonstration de notre future super application !"
+                  }
+                </p>
+              </div>
+              <div className={styles.explanationCard}>
+                <img src="kyckybaml.png" alt="portemonnaie" />
+                <h3>{"Vérifiez votre compte"}</h3>
+                <p>
+                  {
+                    "Vous souhaitez aller plus loin avec notre super app ? Une simple vérification rapide est demandée !"
+				  }
+                </p>
+              </div>
+              <div className={styles.explanationCard}>
+                <img src="recharger.png" alt="communauté" />
+                <h3>{"Rechargez et Profitez !"}</h3>
+                <p>
+                  {
+                    "Profitez d'un compte rechargeable avec les principales cryptomonnaies telles que OZA, BTC..."
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.featuresInner}>
+          <div className={styles.container}>
+            <div className={styles["ldTitle"] + " " + styles["ldTitleY2"]}>
+              <h2> {"Pourquoi choisir Ozalentour ?"}</h2>
+              <p>{"Une seule application multiservices pour tous vos besoins de la vie courante: Un Compte, des Bons Plans et une 				Super App de Paiement !"}</p>
+            </div>
+            <div className={styles.featuresItem}>
+              <div className={styles.featuresThumb}>
+				 {loadImage === false ? (
+           <img src="compte-social.png" alt="compte social auto-rémunéré" />
+              ) : (
+                <div className={styles.containerLoader}>
+                  <div className={styles.loader} />
+                </div>
+              )}
+            </div>
+              <div className={styles.featuresInfo}>
+                <h3>
+                   <span>{"Un Compte, un RIB, une CB"}</span>
+                   {" et du Cashback jusqu'à 70% !"}
+                </h3>
+                <p>
+                  {
+                  "Avec Ozalentour, profitez du 1er compte IBAN rechargeable et auto-rémunéré en multidevises (€, $, £). Par CB, virement ou via vos monnaies numériques, rechargez votre solde Ozalentour en quelques secondes seulement ! Une fois rechargé, profitez d'un compte social auto-rémunéré en cashback ainsi qu'un lecteur Ozacoin pour suivre sans détention votre investissement sur notre propre cryptomonnaie !"
+                  }
+                </p>
+                <Link href='/ecosysteme#account' >En Savoir +</Link>
+              </div>
+            </div>
+            <div className={styles.featuresItem}>
+				
+              <div className={styles.featuresThumb}>
+				  	{loadImage === false ? (
+                <img src="marketplace.png" alt="place de marché" />
+              ) : (
+                <div className={styles.containerLoader}>
+                  <div className={styles.loader} />
+                </div>
+              )}
+            </div>
+              <div className={styles.featuresInfo}>
+                <h3>
+				  <span>{"Une Marketplace"}</span>
+                   {" pour vendre et acheter plus facilement !"}
+                </h3>
+                <p>
+                  {
+                  "Explorez les activités et les bons plans promus par les membres Ozalentour et soyez récompensé en cashback (argent) après chaque nouvelle expérience ! Disponible sur notre explorateur, choisissez votre bon plan ou votre service, payez, recevez et profitez ! Consommateur ? Professionnel ? Freelance ? Une activité et des offres à promouvoir ? Pensez Ozalentour !"
+                  }
+                </p>
+                <Link href='/ecosysteme#plans' >En savoir +</Link>
+              </div>
+            </div>
+<div className={styles["featuresItem"] + " " + styles["featuresItemExplore"]}>
+            <div className={styles.featuresThumb}>
+				
+				{loadImage === false ? (
+            <img src="reseau-social.png" alt="social network" />
+              ) : (
+                <div className={styles.containerLoader}>
+                  <div className={styles.loader} />
+                </div>
+              )}
+            </div>
+              <div className={styles.featuresInfo}>
+                <h3>
+                  <span>{"Un Réseau Social"}</span>
+                  <br />
+                  {" mettant en avant votre parole et votre talent !"} 
+                </h3>
+                <p>
+                  {
+                    "Depuis Ozalentour, gardez contact avec vos amis et relations et devenez populaire grâce à vos actions, vos partages et votre talent ! Retrouvez ainsi sur notre super app des publications, des photos et des vidéos favorisés en fonction des 'Coups de Cœur' reçus par votre entourage et notre communauté ! En devenant populaire, gagnez en notoriété ! "
+                  }
+                </p>
+				<div>
+                <Link href='/ecosysteme#news-feed' >En Savoir +</Link>
+				</div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.downloadAppContainer}>
+            <div className={styles.container}>
+              <h3>{"Téléchargez l'application"}</h3>
+              <p>{"Super Application de Paiement disponible sous version de démonstration :"}</p>
+              <div className={styles["storeButtons"] + " " + styles["storeButtonBottom"]}>
+				<a href="https://oza.band/Android"  className={styles.boxSocialMedia} download>
+					<img src="googleplay.png"/>
+					<div>
+						<p>Télécharger la démo</p>
+						<p>pour Android</p>
+					</div>
+				</a>
+				<a href="https://oza.band/apple" className={styles.boxSocialMedia} download>
+					<img src="applestore.webp"/>
+					<div>
+						<p>Télécharger la démo</p>
+						<p>pour IOS</p>
+					</div>
+				</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ) : (
+        <LoginModal />
+      )} */}
+    </>
+  );
+}

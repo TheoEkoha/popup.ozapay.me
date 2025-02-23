@@ -1,0 +1,264 @@
+.bannerTeam{
+    height: 150px;
+    background-color: #00b9c7;
+    display: flex;
+    align-items: center;
+    background-image: url(../../public/bg-about.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    margin-bottom: 60px;
+
+}
+.hideImage{
+	opacity:0;	
+}
+.pageTitleContent{
+    padding-left:40px;
+	padding-right:40px;
+}
+.otContent5{
+	margin-bottom:0.6em;	
+}
+.otContent4{
+	margin-bottom: 0.6em;
+}
+.hoverBoxThumb img{
+    transition: all 0.3s;
+    transform: scale(1);
+    -webkit-filter: brightness(91%);
+    max-width:100%;
+    /*display:block;*/
+}
+.hoverBoxThumb{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    -webkit-filter: brightness(105%);
+}
+
+.hoverBoxThumb4{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.hoverBoxThumb a{
+	text-decoration:none;
+}
+.hoverBoxThumb:hover{
+	transform: scale(1.2,1.2);
+    transform-origin: center;
+	z-index:2;
+	transition-duration: 1s;
+}
+.companyInfo{
+    max-width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.hoverBoxThumbHidden{
+	visibility:hidden;	
+}
+
+@media only screen and (max-width: 767px){
+	.otItemMobileNone{
+		display:none;	
+	}
+    .bannerTeam {
+        background-image: none !important;
+    }
+    .mobileOrderx4{
+		order:-1;	
+	}
+	.mobileOrderx3{
+		order:1;	
+	}
+    /*.otContent4 .gridItem{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        margin-bottom: 30px;
+    }*/
+	.otContent{
+		flex-wrap: wrap;
+	}
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px){
+    .bannerTeam {
+        background-position: center right -256px;
+    }
+}
+@media only screen and (max-width: 1200px){
+	.companyInfo img {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%!important;
+  	}
+}
+
+.companyInfo .ciContent span {
+    font-family: "Jost-Book";
+    font-size: 16px;
+    line-height: 23px;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+.companyInfo .ciContent h2 {
+    font-family: "Jost";
+    font-size: 28px;
+    color: #2d2d2d;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 39px;
+}
+.companyInfo .ciContent p{  
+    font-weight: inherit;
+    line-height: 23px;
+    font-size: 16px;
+}
+.companyInfo img{
+    max-width: 570px;
+}
+.ciContent{
+    padding: 0 60px;
+}
+@media only screen and (max-width: 992px){
+    .bannerTeam {
+        background-position: center right -480px;
+        background-size: cover;
+    }
+	.companyInfo{
+    	padding-left:25px;
+		padding-right:25px;
+	}
+	.pageTitleContent{
+		padding-left:25px;
+		padding-right:25px;
+	}
+    .companyInfo .ciContent {
+        padding: 0;
+    }
+    .companyInfo{
+        display:block!important;
+    }
+    .companyInfo img{
+        flex: 0 0 100%;
+        max-width: 100%!important;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 575px){
+	.pageTitleContent{
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.companyInfo{
+    	padding-left:15px;
+		padding-right:15px;
+	}
+}
+@media only screen and (max-width: 375px){
+    .hoverBoxThumb{
+        text-align: center;
+    }
+    
+    .gridItem{
+        -webkit-box-flex: 0!important;
+        -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+    }
+}
+
+.pageTitleContent h1{
+    color: #ffffff;
+    font-size: 29px;
+    margin-bottom: 5px;
+	/*text-shadow: 1px 2px 1px black;*/
+}
+.pageTitleContent p{
+    color:#ffffff;
+}
+.containerTeam{
+    max-width: 777px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and (min-width: 1200px){
+  .containerTeam {
+    max-width: 1200px!important;
+  }
+  .otItem-x3{	
+  	width: 109rem;
+  }
+  
+
+}
+.theTeam{
+    padding: 60px 0;
+}
+.theTeam h2{
+    font-size: 24px;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.otContent{
+    text-align: center;
+    display: flex;
+	justify-content:center;
+}
+
+
+.test{
+    bottom: 4rem;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.test h3,.test span{
+    color:white;
+}
+.test h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.test span{
+    font-family: "Jost-Book";
+    font-style: italic;
+    font-size: 16px;
+    color: #ffffff;
+}
+.otContent3 .gridItem{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+.gridItem{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.otItem{
+    position:relative;
+}
+.containerLoader {
+  justify-content: center;
+  display: flex;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #01b9c7;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+}

@@ -1,0 +1,294 @@
+.walletBackground {
+    position: absolute;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #191b1dc7;
+    
+}
+ 
+.squareOZA{
+	background-color: #f9bb28;	
+}	
+
+@media only screen and (max-width: 550px){
+    .wallet {
+        width: 92%!important;
+    }
+}    
+@media only screen and (min-width: 551px) and (max-width: 800px){
+    .wallet {
+        width: 60%!important;
+    }
+}    
+@media only screen and (min-width: 801px) and (max-width: 999px){
+    .wallet {
+        width: 50%!important;
+    }  
+}
+@media screen and (min-width: 992px) and (max-width: 1300px){
+    .wallet {
+        width: 33%!important;
+    }
+}
+
+.walletContainer {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 3000;
+    }
+
+.wallet {
+    background-color: #FFFFFF;
+    color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        
+        }       
+
+.walletHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1F1F1F;
+   	padding: 1.74rem 1rem;
+}
+
+.searchHeader {
+    width: 1.5rem;
+}
+
+.arrowHeader {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-right: 0.2em solid rgba(0,183,197,1);
+    border-top: 0.2em solid rgba(0,183,197,1);
+    transform: rotate(-135deg);
+}
+
+.arrowHeader:hover {
+    cursor: pointer;
+}
+
+.walletMain {
+    width: 100%;
+    height: 93vh;
+    padding: 1rem;
+	 overflow: scroll;
+}
+.walletMain::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+
+.walletSquare {
+    border-radius: 0.8rem;
+    background-color: #00b7c5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.walletSquareHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.walletSquareHeader p:nth-child(odd){
+   font-size:0.8rem;
+  } 
+.ozaphyre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+	margin-top: 0.8rem;
+}
+.ozaphyreAmount {
+    font-size: 2rem;
+    font-weight: 600;
+    
+}
+
+.ozaphyreHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+}
+.ozaphyreHeader p{
+    display:flex;
+    align-items: center;
+    
+}
+.ozaphyreHeader img{
+    width:1.5rem;
+    margin-left: 0.4em;
+    margin-bottom: 0.2em;
+}
+.ozgcontainer{
+	display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.squareOZP{
+    margin-bottom:0.5rem;
+    background-color:#2cc3ce;
+}
+.squareOZG{
+    background-color: #f9bb28;
+}
+.squareOZG p{
+    color:black;
+}
+.smallSquare{
+	
+	border-radius: 0.5rem;
+	z-index: 0;
+	padding: 0.8rem 0.6rem;
+    justify-content: space-between;
+    display: flex;
+}
+.squareContentRight p{
+	text-align: right;
+}
+.smallSquare p{
+    font-size:12px;
+}
+
+.optionsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.options{
+    text-align: center;
+}
+.options p{
+    color:black;
+    font-size: 0.8rem;
+}
+.options img{
+    width: 2.6rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.collect{
+    background-color:#DD5680;
+}
+.askcash{
+    background-color: #00b7c5;
+}
+.transfer{
+    background-color: #f9bb28;
+}
+.convert{
+    background-color: black;
+}
+.transactionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.transactionsContainer::-webkit-scrollbar {
+    display: none; 
+}
+.transactonsTitle {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5px;
+    color: #1F1F1F;
+}
+
+.transactionMonth {
+    color: #1F1F1F;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 20px!important;
+    padding-bottom: 10px;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(211, 209, 209);
+    padding: 0.5rem;
+    margin: 2px auto 6px auto;
+
+}
+
+.transactionInfos {
+    line-height: 1;
+    width:58%;
+}
+
+.transactionBubble {
+    width: 1.875rem;
+    margin-right: 0.5em;
+}
+
+.transactionName {
+    font-size: .8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.transactionDate {
+    font-size: .8rem;
+    color:  black;
+    margin-top: .5rem;
+}
+.montantTransaction{
+    width:30%;
+}
+.transactionAmount {
+    color: rgb(59, 59, 59);
+    font-weight: bold;
+    font-size: 13px;
+    text-align: right;
+}
+
+.rechargeButton {
+    width: 5rem;
+    height: 2rem;
+    background-color: #ffffff;
+    color: #23D3D2;
+    border: none;
+    border-radius: 1rem;
+    padding: .3rem;
+    font-size: .8rem;
+    font-weight: 600;
+	
+}
+
+.rechargeButton:hover{
+cursor: pointer;
+}

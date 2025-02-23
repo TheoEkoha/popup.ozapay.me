@@ -1,0 +1,184 @@
+.collectBackground {
+    position: absolute;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #191b1dc7;
+    
+}
+
+  
+.collectContainer {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 3000;
+    }
+
+.collect {
+    background-color: #FFFFFF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}       
+@media screen and (max-width: 550px){
+    .collect {
+      width: 92%!important;
+    }
+  }
+  @media only screen and (min-width: 551px) and (max-width: 800px){
+    .collect {
+        width: 60%;
+    }
+  }    
+  @media only screen and (min-width: 801px) and (max-width: 999px){
+    .collect {
+        width: 50%;
+    }  
+  }
+  @media screen and (min-width: 992px) and (max-width: 1300px){
+    .collect {
+        width: 33%!important;
+    }
+  }
+.collectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1F1F1F;
+    padding: 2rem 1rem;
+}
+
+.titleHeader {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+
+.arrowHeader {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-right: 0.2em solid rgba(0,183,197,1);
+    border-top: 0.2em solid rgba(0,183,197,1);
+    transform: rotate(-135deg); 
+}
+
+.arrowHeader:hover {
+    cursor: pointer;
+}
+
+.collectMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
+    height: 93vh;
+    padding: 1rem;
+}
+
+.collectFormContainer {
+    width: 100%;
+}
+
+.collectForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.collectForm input:focus{
+    outline: none;
+}
+
+.collectFormAmount{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 36px;
+    color: grey!important;
+    width: 100%;
+    border: none;
+ }
+
+ .collectFormDesription{
+    font-size: 1rem;
+    width: 10em;
+    border-top: none;
+    border-right: none;
+    color: grey;
+    border-bottom: 1px solid grey;
+    border-left: none;
+ }
+
+ .collectFormDesription::placeholder{
+    text-align: center;
+ }
+
+ .calculatorContainer {
+    align-items: center;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: 0%;
+
+ }
+
+ .digitContainer {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.6rem;
+    color: rgb(104, 103, 103);
+    margin-bottom: 0.5rem;
+    font-size: 2em;
+    width: 26%;
+    
+ }
+
+ .digitContainer:hover, .eraseContainer, .invoiceButton {
+   cursor: pointer;
+}
+
+ .eraseContainer {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: .5rem;
+    width: 26%;
+}
+
+ .erase {
+    width: 50%;
+  
+ }
+
+ .invoiceButton {
+     width: 100%;
+     height: 2.5rem;
+     background-color: #01b9c7;
+     border-radius: 1rem;
+     border: none;
+     color: white;
+     margin-top: 1rem;
+ }

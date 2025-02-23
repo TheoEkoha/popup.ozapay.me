@@ -1,0 +1,1191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+.modalBackground {
+  /*position: absolute;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #191b1dc7; */
+
+  margin: auto;
+  width: 100%;
+  z-index: 8999;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalContainer {
+  font-family: Jost;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+}
+@media screen and (max-width: 700px) {
+  .modalContainer {
+    margin: 0% 0% 0%;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    width: 100%;
+    border-radius: 0px !important;
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+  }
+}
+
+.checkBoxForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  width: 100%;
+}
+.checkBoxForm a {
+  color: #12abab;
+  text-decoration: none;
+}
+.checkBox {
+  width: 2rem;
+  margin-left: 0;
+}
+
+.lostAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  color: #797777;
+  height: 4rem;
+}
+
+.lostAccount a {
+  text-decoration: none;
+  color: #01b9c7;
+  margin-bottom: 1.5rem;
+}
+
+.lostPasswordContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.lostPassword {
+  margin-top: 1.5rem;
+}
+.version {
+  font-size: 0.86rem;
+}
+
+.lostPasswordContainer a {
+  text-decoration: none;
+  color: #01b9c7;
+}
+
+.emailStepButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.resendButton {
+  height: 2.5rem;
+  width: 10rem;
+  background-color: #dd5680;
+  color: #ffffff;
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.finalRegisterForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+}
+
+.submitRegister {
+  width: 100%;
+}
+
+.submitButton {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #01b9c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+}
+
+.modalContainer img {
+  margin-bottom: 2rem;
+}
+
+.progressBar {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  border-radius: 0.25rem;
+  margin-bottom: 30px;
+  background-color: #e9ecef;
+}
+.progressFirstStep,
+.progressSecondStep,
+.progressThirdStep,
+.progressFourStep,
+.progressFifthStep {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #17bfcc;
+}
+.progressFirstStep {
+  width: 10%;
+}
+.progressSecondStep {
+  width: 30%;
+}
+.progressThirdStep {
+  width: 50%;
+}
+.progressFourStep {
+  width: 75%;
+}
+.progressFifthStep {
+  width: 100%;
+}
+.progressDot {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border-radius: 100%;
+  background: #797777;
+}
+
+.progressDotActive {
+  width: 2.5rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border-radius: 3em;
+  background: #01b9c7;
+}
+
+.fullInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+.fullInputCode{
+  margin-top:0;	
+}
+
+.oneInput {
+  position: relative;
+  width:48%;
+}
+.fullInput label {
+  top: 7px;
+  font-size: 1rem;
+  color: #1c2437;
+  position: absolute;
+  margin-bottom: 0;
+  left: 17px;
+  z-index: 2;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.fullInputPhone {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+  width: 100%;
+  height: 4.5rem;
+  margin: 0.8rem 0 0.8rem 0;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+
+.loginInput {
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 30px 15px 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  align-items: center;
+  outline: none;
+  box-shadow: none;
+  margin-left: -1px;
+}
+.sucessCode {
+  color: #01b9c7;
+  margin-left: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.formErrorsContainer{
+     position: relative;
+     margin-left:0.7rem;
+}
+.formErrorsContainerPassword{
+	 width: 20rem!important;	
+}
+.confirmation{
+	color: #01b9c7!important;
+	font-size: 0.9rem!important;
+}
+.formErrors {
+  color: #01b9c7;
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+  top: 0.3rem;
+  position: absolute;
+  font-size: 0.85rem;
+}
+
+.formErrorsLogin {
+  color: #01b9c7;
+    margin-top: 1.5rem;
+    font-size: .85rem;
+    position: relative;
+    bottom: 0.8rem;
+}
+.formErrorsLoginFinal {
+  color: #01b9c7;
+  margin-top: 2rem;
+  position: fixed;
+}
+.formErrorsPassword {
+  color: #01b9c7;
+  margin-left: 0.4rem;
+  position: absolute;
+  font-size: 0.85rem;
+  width: 20rem;
+}
+.inputEye {
+  position: absolute;
+  right: 1em;
+  top: 0.8em;
+  font-size: 1.5em;
+  color: #8b8989;
+}
+
+.inputEye:hover {
+  cursor: pointer;
+}
+
+.loginInput::placeholder {
+  color: #727272;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.loginFormButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.registerFormButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.loginButton {
+  background-color: #01b9c7;
+  border: none;
+  border-radius: 1.5rem;
+  align-items: center;
+  display: flex;
+  line-height: 40px;
+  font-weight: 500;
+  padding: 0 20px;
+  color: #ffffff;
+  outline: 0;
+  outline-offset: 0;
+  font-size: 1rem;
+}
+
+.loginButton:hover,
+.registerButton:hover {
+  cursor: pointer;
+}
+
+.registerButton {
+  width: 8.5rem;
+  background-color: #ffffff;
+  color: #01b9c7;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  border: 2px solid #01b9c7;
+}
+
+.modalLeft {
+  width: 75%;
+  right: 10rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 4.5% 4% 0 0;
+  margin-left:70px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modalLeftLogin{
+  justify-content:center;
+  padding: 0 4% 0 0!important;
+}
+.modalLeft label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #14133b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.toConnect {
+  font-size: 16px!important;
+  font-weight: 500;
+  color: #646464!important;
+  margin-bottom: 1rem;
+}
+.modalLeft input {
+  display: flex;
+  align-items: center;
+  /* flex: 1 1; */
+  width: 100%;
+  color: #aeadae;
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 25px;
+  padding: 0.8rem 15px 0.8rem 31px;
+  /* font-size: .75rem; */
+  font-size: 1rem;
+  font-weight: 400;
+
+  font-family: Jost;
+  /* position: relative; */
+  color: #212529;
+}
+.step{
+	margin-bottom:1rem;	
+}
+.modalRightShadow {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  border-radius: 41px;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 37rem;
+  color: #fff;
+  padding: 3rem;
+  width: calc(22em * 1.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modalLeft .buttonLogin {
+  
+ display:block!important;
+  font-size: 17px;
+}
+.modalLeft .arrow {
+  position: relative;
+  margin-bottom: 0;
+  width: 1rem;
+  top: 0.15rem;
+  right: 2rem;
+}
+.inputPassword {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.inputEmail{
+  width:336px!important;	
+}
+
+.inputLogin {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width:65%!important;
+ 
+}
+.inputReset{
+  margin-bottom: 2rem!important;
+  margin-top: 1.5rem;
+  width:100%!important;
+}
+.inputLeft {
+  margin-right: 2rem;
+}
+.asteriskContainer{
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+}
+.asterisk{
+    color: red;
+    text-align: right;
+}
+.asteriskHidden{
+   visibility: hidden;
+   width:9.48px;
+}
+.seconds{
+	position: absolute;
+    bottom: 0.7rem;
+    right: 3rem;
+    font-size: 0.9rem!important;
+    color: #01b9c7!important;
+}
+.changeColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem !important;
+  border-radius: 25px;
+  padding: 0.8rem 0px 0.8rem 0px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Jost;
+  background-color: white;
+  border: 1px solid #e8e8e8!important;
+}
+.changeColorGreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem !important;
+  border-radius: 25px;
+  padding: 0.8rem 0px 0.8rem 0px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Jost;
+  background-color: white;
+}
+.changeColor p {
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+  font-size: 1rem !important;
+}
+.changeColorGreen p {
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+}
+.changeColor {
+  background-color : #dbdbdb;
+}
+.changeColorGreen {
+  background-color: #01d89c;
+}
+
+@media screen and (max-width: 1440px) {
+  .modalLeft input {
+    
+    font-size: 0.9rem;
+  }
+  .codeInput {
+    width: 11rem !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .fullInput {
+  }
+  .send {
+    left: 14.5rem;
+  }
+  .modalLeft input {
+    
+    margin-right: 1 !important;
+  }
+  .modalRightShadow {
+	 height: auto!important;
+	 left: 18%!important;
+	 width: calc(14em * 1.5);
+  }
+  
+  
+  .modalRight {
+    width: 42vw !important;
+  }
+  
+  .codeInput {
+    width: 12rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .changeColor {
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+  }
+  .changeColorGreen {
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+  }
+  .changeColor p {
+    font-size: 0.9rm;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fullInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .inputLeft {
+    margin-right: 0rem;
+  }
+  .inputSpecial {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .send {
+    margin-top: 0 !important;
+  }
+
+  .codeInputSMS {
+    margin-top: 1rem;
+  }
+  .modalRight{
+	background: url(/homePageMobile.png) 50%!important;
+  }
+  .buttonRegister input[type="submit"],
+  .buttonRegister input[type="button"] {
+    margin-right: 0 !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .modalRightShadow {
+	width:22rem!important;  
+  }
+  .send {
+    top: 1.1rem !important;
+
+    left: 14.5rem;
+  }
+  .modalRight{
+    max-height: 273px!important;
+    
+  }
+  .modalRightShadow{
+  top: 8.5rem!important;
+	left: 50%!important;
+	padding: 2rem 2rem!important;
+  }
+  
+}
+
+.pro {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  /* flex: 1 1; */
+  color: #aeadae;
+  border: 2px solid #000 !important;
+  border-radius: 25px;
+  font-size: 1rem !important;
+  width: 100%;
+  padding: 0.8rem 15px 0.8rem 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Jost;
+  color: #212529;
+}
+.modalLeft input::placeholder,
+.modalLeft select::placeholder {
+  color: #b9b9b9;
+}
+.submitType {
+  width: auto !important;
+  padding: 0.8rem 40px !important;
+  color: white !important;
+  background-color: #08bcca !important;
+}
+.react-tel-input .selected-flag {
+  background-color: black;
+}
+.modalLeft p {
+  font-size: 20px;
+  
+}
+
+.modalLeft select {
+  border-radius: 25px;
+  padding: 0.8rem 15px 0.8rem 30px;
+  font-size: 0.75rem;
+  width: 28rem;
+  border: 1px solid #e8e8e8;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Jost;
+  position: relative;
+  
+  margin-bottom:2rem;
+  
+  appearance: none;
+  cursor: pointer;
+}
+
+
+.modalLeft h2 {
+  color: #14133b;
+  font-weight: 600;
+  font-size: 36px;
+  font-family: Jost;
+  margin-bottom:1.5rem;
+  
+}
+
+.fullInput .send {
+  max-width: 3rem;
+  position: absolute;
+  z-index: 101;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.7rem;
+  top: 1rem;
+  border: none !important;
+  background: 0 0;
+  width: 8rem;
+  right: 2.5rem;
+  font-size: 0.7rem !important;
+  font-weight: 700;
+  color: #08bcca !important;
+}
+.fullInput form {
+  position: relative;
+}
+
+.modalLeft img {
+  margin-bottom: 2rem;
+  max-width: 45%;
+}
+
+.modalSucessContainer {
+  font-family: Jost;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #0bbbca;
+}
+.modalSucessContainer p,
+.modalSucessContainer h2 {
+  color: white;
+}
+.modalSucessContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.modalSucess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.modalSucess button{
+  cursor:pointer;	
+}
+.buttonRegister {
+  display: flex;
+}
+.buttonRegister input {
+  font-size: 15px;
+}
+.buttonRegister input[type="submit"],
+.buttonRegister input[type="button"] {
+  background: #17bfcc;
+  border-radius: 25px;
+  color: #fff;
+  border: none;
+  font-family: Jost;
+  padding: 9px 40px;
+  display:flex;
+  justify-content:center;
+  width: 14rem!important;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.buttonLogin {
+  display: flex;
+}
+.buttonLogin input {
+  font-size: 1rem;
+  width: 65%!important;
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  background: #17bfcc;
+  color:white;
+  cursor:pointer;
+}
+.modalSucessContainer button {
+  background: transparent;
+  border-radius: 20px;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid #fff;
+  color: white;
+}
+.validationContainer {
+  border-radius: 3rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.validationContainer img {
+  width: 6rem;
+  border-radius: 100%;
+  padding: 1.5rem 1rem;
+}
+.boxInterestContainer{
+  margin-bottom:1rem;	
+}
+.boxInterest {
+  display: flex;
+  width: 14.5rem;
+  align-items: center;
+  border-radius: 35px;
+  margin-bottom: 1rem;
+  border: 1px solid #dddddd;
+  cursor:pointer;
+}
+
+.boxInterest p {
+  margin-bottom: 0 !important;
+  font-size: 0.8rem;
+}
+.boxInterest img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 80px;
+  padding: 0.3rem;
+  margin: 0.4rem;
+  max-width: fit-content !important;
+}
+.boxInterest .notSelected {
+     background-color: #c7c7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 0.4rem;
+    position: relative;
+    border-radius: 50px;
+}
+.boxInterest .notSelected p {
+    display: flex;
+    border-radius: 80px;
+    max-width: -moz-fit-content!important;
+    font-size: 2rem;
+    position: relative;
+    bottom: 0.2rem;
+    align-items: center;
+	color:white;
+}
+.boxInterest .selected {
+  background-color: #14e63d;
+}
+
+.modalLeft::-webkit-scrollbar {
+  display: none;
+}
+
+.modalLeft h3 {
+  color: #0a0a0a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.modalLeft p {
+  color: #1c2437;
+  line-height: 1.5rem;
+  
+}
+
+.modalRight {
+  border-radius: 0 100px 100px 0;
+  background: url(/loginPicture.jpg) 50%;
+  background-size: cover;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 4px #000 !important;
+  background-size: cover;
+  background-position: center;
+  width: 75vw;
+}
+
+.registerButton {
+  display: none;
+}
+.logoContainer {
+  margin-bottom: 4rem;
+}
+.bottomShadow {
+  display: block;
+  margin-top: 10rem;
+  text-align: left;
+}
+.password {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.password p {
+  color: #17bfcc;
+  font-size: 1.1rem;
+  cursor: pointer; 
+  margin-bottom: 1rem;
+}
+.registerText {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+.modalRightShadow img {
+  width: 15rem;
+}
+
+.welcome h2 {
+  font-size: 35px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  line-height: 44px;
+}
+.welcome p {
+  display:block;
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 390px;
+  line-height: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .modalRight {
+    width: 100%!important;
+    max-height: 62%;
+    height: 140rem;
+    position: relative;
+	border-radius:0;
+  }
+   .modalLeft h2{
+	  margin-bottom: 1.5rem!important;
+  }
+  .welcome h2 {
+	line-height: 36px!important;  
+  }  
+  .welcome p{
+	display:none;  
+  }
+  .formErrors {
+    position: relative;
+  }
+  .formErrorsLogin {
+	bottom: 0!important;
+  }
+  .asteriskContainer{
+	top: 2rem;
+  }
+  .modalContainer{
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+	overflow-x: hidden;
+  }
+  .modalLeftLogin{
+	padding: 0 0 0 0!important; 
+	
+  
+  }
+  .inputUserInfos{
+	margin-top: 1rem;
+  }
+  .modalLeft {
+    width: 22rem;
+    overflow-y: scroll;
+    display: block;
+	margin-top: 1rem;
+    margin-bottom: 1rem;
+	margin-left:0!important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    overflow-y: scroll;
+	padding: 4.5% 0% 0 0!important;
+    
+  }
+  
+  .send{
+	left: 17.5rem!important;
+	top: 1rem!important;
+  }
+  .oneInput {
+	width:auto!important;
+  }
+  .toConnect{
+	margin-bottom:0rem!important;  
+  }
+  .modalLeft select {
+	  width: 22rem;
+	  margin-bottom: 0!important;
+  }
+  .boxInterestContainer{
+	display: flex!important;
+    flex-direction: column!important;
+    align-items: center!important;
+	margin-bottom:0!important;
+  }
+  .closeModalMobile{
+	  display:block!important;
+	  right: 1.5rem!important;
+	  top:1.5rem!important;
+      
+  }
+  .closeModalDesktop{
+	  display:none!important;   
+  }
+  .password p{
+	  margin-bottom: 0!important;
+  }
+  .step{
+	margin-top: 0rem;
+  }
+  .password {
+	  margin-top:1rem!important;
+	  margin-bottom:1rem!important;  
+  }
+  .buttonRegister {
+    justify-content: center;
+  }
+  .modalLeft label{
+	  
+	  margin-bottom:0!important;
+  }
+  .modalLeft h2 {
+	  
+	  font-size: 24px;
+	  
+  }
+  .titleConnect{
+	  margin-bottom:15px;
+	  margin-top: 9rem;
+  }
+  .buttonLogin input {
+	width:100%!important;  
+  }
+  .selectContainer {
+    position: relative;
+  }
+  .modalLeft .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+  }
+  .fullInput {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .choiceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .buttonRegister {
+    flex-direction: column;
+    align-items: center;
+	margin-top: 0rem;
+	margin-bottom: 0;
+  }
+  .buttonRegister input[type="submit"],
+  .buttonRegister input[type="button"] {
+    margin-right: 0 !important;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+
+  }
+  .modalLeft .arrow {
+    position: absolute !important;
+    margin-bottom: 0;
+    width: 1rem;
+    bottom: 2.95rem;
+    left: 20rem;
+    top: 1rem;
+  }
+
+  .modalLeft input {
+    width: 22rem!important;
+    font-size: 1rem!important;
+    margin-right: 0!important;
+    padding: 10px 15px;
+    margin-bottom: 0rem;
+    
+
+    
+  }
+  .logoContainer{
+	margin-bottom:0!important;  
+  }
+  .welcome h2{
+	font-size: 22px!important;  
+  }
+  .welcome p{
+      margin-bottom: 2rem!important;
+  }
+  .modalRightShadow {
+	
+    
+	 top: 31%;
+	left: 50%!important;
+	padding: 3rem 2rem;
+  }
+  .modalRightShadow img{
+	width:12rem!important;  
+  }
+  .bottomShadow{
+	margin-top:0!important;
+  }
+  .modalContainer img{
+	margin-bottom:0!important;
+  }
+}
+.modalRightRegister {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  background: url("/openaccount.jpg") center;
+  background-size: cover;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 4px #000 !important;
+}
+
+.closeModal {
+  position: absolute;
+  font-size: 1.875rem;
+  color: #858585;
+  
+}
+.closeModalDesktop{
+	display:block;
+    right: 2rem;
+    top: 1.4rem;
+}
+.closeModalMobile{
+    display:none;	
+}
+.closeModal:hover {
+  cursor: pointer;
+}
+
+.lostPasswordButton {
+  color: #01b9c7 !important;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.lostPasswordButton:hover {
+  cursor: pointer;
+}
+
+.hideForm {
+  display: none !important;
+}
+
+.registerMessage {
+  margin-top: 2rem;
+  color: #01b9c7 !important;
+  font-weight: 600;
+}
+
+.hideRegisterMessage {
+  display: none;
+}
+
+.modalPasswordError {
+  background-color: #dd5680;
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: calc(20% * 1.2);
+  right: calc(16% * 1.2);
+  border: rgba(255, 0, 0, 0.5) solid 1px;
+  border-radius: 30px;
+  color: white !important;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .modalRightRegister {
+    background: none;
+    width: 5% !important;
+    display: none;
+    color: #e0e0e0;
+  }
+  .modalRightRegister svg {
+    text-shadow: 1px 1px 4px #000 !important;
+  }
+  .registerButton {
+    display: block;
+  }
+  
+ 
+}
+@media only screen and (max-width: 1024px) {
+  
+  .modalRightRegister svg {
+    text-shadow: 1px 1px 4px #000 !important;
+  }
+  
+}

@@ -1,0 +1,168 @@
+.SucessConnectBSCBackground {
+  position: absolute;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #191b1dc7;
+}
+
+.SucessConnectBSCContainer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 3000;
+}
+
+.SucessConnectBSC {
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+@media screen and (max-width: 550px) {
+  .SucessConnectBSC {
+    width: 100% !important;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 800px) {
+  .SucessConnectBSC {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 999px) {
+  .SucessConnectBSC {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  .SucessConnectBSC {
+    width: 33% !important;
+  }
+}
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #373945;
+  z-index: 3000;
+}
+
+.arrowContainer {
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #1F1F1F;
+    padding: 2rem 1rem;
+}
+
+.titleHeader {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+
+.arrowHeader {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    border-right: 0.2em solid #fff;
+    border-top: 0.2em solid #fff;
+    transform: rotate(-135deg);
+}
+
+.arrowHeader:hover {
+    cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 98%;
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 5%;
+}
+
+.OZALogo {
+  height: 150px;
+  width: 150px;
+  margin-top: 2rem;
+}
+
+.titleContainer {
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.title {
+ font-size: 1.2rem;
+ font-family: Jost;
+ font-weight: 400;
+ color: #373945;
+ text-align: center;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #373945;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+.submitText {
+  font-size: 1rem;
+  font-family: "Jost";
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.returnContainer {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.return {
+  padding: 10px;
+  background-color: #089baa;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+}

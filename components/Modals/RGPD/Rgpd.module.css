@@ -1,0 +1,184 @@
+.ousiteRGPD{
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.75); 
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.modalRGPD{
+    background-color: whitesmoke;
+    width: calc(34em*1.5);
+    border-radius: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: calc(2.2em*1.1) auto;
+}
+
+.modalRGPD h2 {
+    font-size: calc(1.1em*1.1);
+    color: #01B9C7;
+    margin-bottom: calc(0.5em*1.1);
+    margin: 2% 5%;
+}
+
+.modalRGPD p{
+    font-size: calc(0.9em*1.1);
+    margin: 0% 5% 2%;
+}
+.modalRGPD p a {
+	color: 	#01B9C7;
+	text-decoration: underline!important;
+}
+.buttonrgpd{
+   text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+ .Refuser{
+    margin-right: 15%;
+	border: 2px solid #01B9C7;
+    border-radius: 30px;
+    font-weight: 900;
+	font-size: calc(1em*1.2);
+	cursor:pointer;
+	padding:2%;
+    color: #01B9C7;
+}
+
+ .Accepter{
+    background-color: #01B9C7;
+    border-radius: 30px;
+    font-weight: 900;
+    color: whitesmoke;
+	font-size: calc(1em*1.2);
+   /*  width: calc(4em*1.5); */
+	cursor:pointer;
+	border: none;
+	padding:2%;
+}
+
+.lirgpd {
+	border: 0;
+    font-size: calc(0.9em*1.1);
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    margin: 0% 5% 1% 5%;
+    list-style: none;
+}
+
+.ozalentourlogo{
+	    display: flex;
+    justify-content: flex-end;
+    margin: 3%;
+
+}
+
+.ozalentourlogo img{
+		height:20px
+}
+
+.buttonrgpd{
+	margin-top: 2%	
+}
+
+.buttonrgpd button{
+	border-color: #01B9C7 !important;
+	border: solid 2px #01B9C7 !important;
+	
+}
+.liennotAvailable{
+	cursor: not-allowed
+}
+
+.modalHidden{
+	display:none;	
+}
+/* ______                                      _             
+| ___ \                                    (_)            
+| |_/ / ___  ___  _ __    ___   _ __   ___  _ __   __ ___ 
+|    / / _ \/ __|| '_ \  / _ \ | '_ \ / __|| |\ \ / // _ \
+| |\ \|  __/\__ \| |_) || (_) || | | |\__ \| | \ V /|  __/
+\_| \_|\___||___/| .__/  \___/ |_| |_||___/|_|  \_/  \___|
+                 | |                                      
+                 |_|                                      
+ */
+ @media only screen and (max-width:950px){
+	.modalRGPD h2{
+		font-size:calc(1.2em*1.1);	
+	}
+	.modalRGPD p{
+		font-size:calc(0.9em*1.1);	
+	}
+	.modalRGPD{
+		width: calc(20em*1.5);	
+	}
+	 .Refuser {
+	padding: 4%;
+	}
+	 .Accepter {
+	padding: 4%;
+	}
+}
+@media only screen and (max-width:768px){
+	.modalRGPD {
+		width:98%
+	}
+	
+}
+@media only screen and (max-width:560px){
+	 .contenurgpd {
+		  overflow-y: scroll;
+		height:50vh;
+	}
+}
+@media only screen and (min-width:499px) and (max-width:1000px){
+	.modalRGPD {
+		margin: calc(1.9em*1.1) auto;
+	}
+}
+@media only screen and (max-width:499px){
+	.modalRGPD {
+		margin: calc(7.4em*1.1) auto;
+	}
+	.buttonrgpd::child{
+			margin-bottom:5%
+	}
+	.Refuser {
+
+		font-size: calc(0.8em*1.2);
+	}
+	 .Accepter {
+
+		font-size: calc(0.8em*1.2);
+	}
+	
+	
+}
+
+
+@media only screen and (min-width:497px) and (max-width:800px){
+		.Refuser {
+		font-size: calc(0.8em*1.2);
+	}
+	.Accepter {
+
+		font-size: calc(0.8em*1.2);
+	}
+}
+
+
+@media only screen and (width:810px) and (height:1080px){
+		.modalRGPD {
+		margin: calc(6em*1.1) auto;
+	}
+}

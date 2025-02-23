@@ -1,0 +1,191 @@
+.banner{
+    height: 150px;
+    background-color: #00b9c7;
+    display: flex;
+    align-items: center;
+    background-image: url(../../public/ozagold.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    margin-bottom: 60px;
+
+}
+
+.pointerLink{
+	cursor:pointer;	
+}
+.featuresItem h3 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    width: 100%;
+	line-height: 1.2;
+	margin-top: 15px;
+}
+.featuresItem h3 span {
+    color: #23d3d3;
+}
+.featuresItem a{
+	font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 2px solid #23d3d3;
+    color: #23d3d3;
+    font-family: Jost;
+    position: relative;
+	cursor:pointer;
+}
+.container{
+    max-width: 777px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.pageTitleContent{
+    padding-left:40px;
+	padding-right:40px;
+}
+.pageTitleContent h1{
+    color: #ffffff;
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 1260px){
+	.pageTitleContent h1{
+    
+    font-size: 26px;
+    
+	}
+}
+@media only screen and (max-width: 992px){
+    .banner {
+        background-position: center right -480px;
+        background-size: cover;
+    }
+    .companyInfo{
+        display:block!important;
+        max-width: 714px!important;
+    }
+	.featuresItem h3 {
+        font-size: 43px;
+    }
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.pageTitleContent{
+    	padding-left:25px;
+		padding-right:25px;
+	}
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px){
+    .banner {
+        background-position: center right -256px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .banner {
+        background-image: none !important;
+    }
+	.featuresItem h3 {
+        font-size: 32px;
+    }
+}
+
+
+.pageTitleContent p{
+    color:#ffffff;
+}
+
+@media only screen and (max-width: 575px){
+    .pageTitleContent h1 {
+		font-size:1.4rem;
+	}
+	.container{
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.pageTitleContent{
+    	padding-left:15px;
+		padding-right:15px;
+	}
+}
+@media only screen and (min-width: 1200px){
+  .container {
+    max-width: 1200px!important;
+  }
+}
+
+
+
+.featuresItem:nth-child(2n-1) .featuresInfo {
+    order: 1;
+}
+.featuresItem:nth-child(2n-1) .featuresThumb {
+    order: 2;
+    padding-right: 0;
+    padding-left: 100px;
+}
+.featuresItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px!important;
+}
+.featuresItem .featuresThumb {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 100px;
+}
+.featuresItem .featuresInfo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.featuresItem p {
+    font-size: 17px;
+    line-height: 1.44;
+    max-width: 470px;
+}
+
+
+.featuresThumb img{
+    border: none;
+    max-width: 95%;
+    height: auto;
+	display: flex;
+	margin: auto;
+}
+@media only screen and (max-width: 575px){
+    .featuresItem {
+        flex-wrap: wrap;
+    }
+    .featuresItem .featuresThumb, .featuresItem .featuresInfo {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .featuresItem:nth-child(2n-1) .featuresThumb {
+        order: 1;
+        padding-left: 0px;
+    }
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #01b9c7;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+}
+.containerLoader {
+  justify-content: center;
+  display: flex;
+}
