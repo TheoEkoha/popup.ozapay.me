@@ -51,7 +51,7 @@ return (
         <p>
       Si vous cliquez sur "Accepter les cookies", toutes catégories seront activées afin d'optimiser votre visite en ligne. Si toutefois vous décidez de les refuser, toutes les fonctions d'ozalentours seront désactivés.
       </p>
-      <p> <a style="color:#00b9c6;" target="_blank" title="Mentions Légales" href="pdf\politiques-de-confidentialite.pdf" >Plus d'informations sur notre politique de confidentialité.</a></p>
+      <p> <a style="color:#00b9c6;" target="_blank" title="Mentions Légales"  >Plus d'informations sur notre politique de confidentialité.</a></p>
       </div>
     </div>
     <div className={styles.buttonrgpd}>
