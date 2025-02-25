@@ -1610,7 +1610,7 @@ export default function LoginModal({isOpenRest}) {
                             <span className={styles.formErrors}>Code valide</span>
                           </div>
                         ) : null}
-                        {textResendMail && !sucessCodeEmailEntered && !isLoadCheckCode && (
+                        {textResendPhone && !sucessCodeEmailEntered && !isLoadCheckCode && (
                           <div className={styles.formErrorsContainer}>
                           <span className={styles.formErrors}>Code de vérification renvoyé par mail.</span>
                         </div>

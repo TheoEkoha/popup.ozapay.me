@@ -1183,7 +1183,7 @@
 
 .Home_OZATitle__Wbxlu {
     color: #373945;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Home_titleMenuSubtitle__ocKoP {
@@ -1193,7 +1193,7 @@
 
 .Home_OZAStackAmount__RewbY {
     color: #373945;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700
 }
 
@@ -1206,7 +1206,7 @@
 .Home_OZAEvolutionTime__PAfz9 {
     color: #373945;
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Home_row__z_DwL {
@@ -2014,7 +2014,7 @@
 
 .Transaction_OZATitle__Pl6yk {
     color: #373945;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Transaction_titleMenuSubtitle__6n_n3 {
@@ -2024,7 +2024,7 @@
 
 .Transaction_OZAStackAmount__Xtxxv {
     color: #373945;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700
 }
 
@@ -2037,7 +2037,7 @@
 .Transaction_OZAEvolutionTime__gqbqf {
     color: #373945;
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Transaction_plus__jMK6h {
@@ -2751,7 +2751,7 @@
 
 .Choice_OZATitle___O4Gh {
     color: #373945;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Choice_titleMenuSubtitle__XC37l {
@@ -2761,7 +2761,7 @@
 
 .Choice_OZAStackAmount__EVF9i {
     color: #373945;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700
 }
 
@@ -2774,7 +2774,7 @@
 .Choice_OZAEvolutionTime__KoAuG {
     color: #373945;
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important
+    font-family: Jost
 }
 
 .Choice_row__OoZma {
@@ -2984,7 +2984,7 @@
     font-size: 1.1rem
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");@import url("https://fonts.googleapis.com/css2?family=Montserrat,sans-serif!important:wght@300;400;500;600;700&display=swap");.LoginModal_modalBackground__etZrg {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");.LoginModal_modalBackground__etZrg {
     margin: auto;
     width: 100%;
     z-index: 8999;
@@ -3008,7 +3008,8 @@
     margin-right: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    width: 41%;
+    width: auto;
+    flex-wrap: wrap;
     grid-gap: .8rem;
     gap: .8rem
 }
@@ -3033,7 +3034,7 @@
 }
 
 .LoginModal_modalContainer__rysfK {
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -3059,8 +3060,7 @@
     display: flex;
     align-items: center;
     grid-gap: 10px;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 10px
 }
 
 .LoginModal_checkBoxInput__PjQ1t input {
@@ -3422,6 +3422,8 @@
 }
 
 .LoginModal_modalLeft__6a1QP label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #14133b;
     font-size: 18px;
     font-weight: 700
@@ -3444,7 +3446,7 @@
     padding: .8rem 15px .8rem 31px;
     font-size: 1rem;
     font-weight: 400;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     color: #212529
 }
 
@@ -3543,7 +3545,7 @@
     padding: .8rem 0;
     font-size: 1rem;
     font-weight: 400;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     background-color: #fff
 }
 
@@ -3590,8 +3592,8 @@
 
     .LoginModal_modalRightShadow__9SGOp {
         height: auto!important;
-        left: 16.8%!important;
-        width: calc(17em * 1.5)
+        left: 18%!important;
+        width: calc(14em * 1.5)
     }
 
     .LoginModal_modalRight__f4cSo {
@@ -3665,7 +3667,7 @@
     }
 
     .LoginModal_modalRightShadow__9SGOp {
-        top: 8rem!important;
+        top: 8.5rem!important;
         left: 50%!important;
         padding: 2rem!important
     }
@@ -3683,7 +3685,7 @@
     padding: .8rem 15px .8rem 30px;
     font-size: 1rem;
     font-weight: 600;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     color: #212529
 }
 
@@ -3718,11 +3720,11 @@
     border-radius: 25px;
     padding: .8rem 15px .8rem 30px;
     font-size: .75rem;
-    width: 19rem;
+    width: 28rem;
     border: 1px solid #e8e8e8;
     font-size: 1rem;
     font-weight: 400;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     position: relative;
     margin-bottom: 2rem;
     -webkit-appearance: none;
@@ -3735,7 +3737,7 @@
     color: #14133b;
     font-weight: 600;
     font-size: 36px;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     margin-bottom: 1.5rem
 }
 
@@ -3768,7 +3770,7 @@
 }
 
 .LoginModal_modalSucessContainer__LlfwI {
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3804,7 +3806,7 @@
 }
 
 .LoginModal_buttonRegister__89nyL {
-    display: flex;
+    display: flex
 }
 
 .LoginModal_buttonRegister__89nyL input {
@@ -3816,11 +3818,11 @@
     border-radius: 25px;
     color: #fff;
     border: none;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     padding: 15px 40px;
     display: flex;
     justify-content: center;
-    width: 12rem!important;
+    width: 14rem!important;
     margin-right: 2rem;
     cursor: pointer
 }
@@ -3950,12 +3952,12 @@
 }
 
 .LoginModal_logoContainer__1qSgQ {
-    margin-bottom: 0.2rem
+    margin-bottom: 4rem
 }
 
 .LoginModal_bottomShadow__eTrQo {
     display: block;
-    margin-top: 2rem;
+    margin-top: 7.5rem;
     text-align: left
 }
 
@@ -3990,18 +3992,17 @@
 
 .LoginModal_welcome__syc2H p {
     display: block;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 300;
     max-width: 390px;
-    line-height: 26px
+    line-height: 20px
 }
 
 @media only screen and (max-width: 1024px) {
     .LoginModal_modalRight__f4cSo {
-        margin-top:-25px;
-        width: 100%!important;
-        max-height: 100%;
-        height: 100%;
+        width:100%!important;
+        max-height: 62%;
+        height: 140rem;
         position: relative;
         border-radius: 0
     }
@@ -4011,7 +4012,7 @@
     }
 
     .LoginModal_welcome__syc2H h2 {
-        line-height: 25px!important
+        line-height: 36px!important
     }
 
     .LoginModal_welcome__syc2H p {
@@ -4046,9 +4047,9 @@
     }
 
     .LoginModal_modalLeft__6a1QP {
-        width: 21rem;
+        width: 22rem;
         display: block;
-        margin-top: 0.1rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         margin-left: 0!important;
         flex-direction: column;
@@ -4072,9 +4073,9 @@
     }
 
     .LoginModal_modalLeft__6a1QP select {
-        width: 19rem;
-        margin-bottom: 0.8rem;
-        !important}
+        width: 22rem;
+        margin-bottom: 0!important
+    }
 
     .LoginModal_boxInterestContainer__5ifws {
         display: flex!important;
@@ -4111,7 +4112,7 @@
     }
 
     .LoginModal_modalLeft__6a1QP label {
-        margin-bottom: 1rem!important
+        margin-bottom: 0!important
     }
 
     .LoginModal_modalLeft__6a1QP h2 {
@@ -4128,8 +4129,7 @@
     }
 
     .LoginModal_selectContainer__k9hf0 {
-        position: relative;
-        margin-bottom: 1rem;
+        position: relative
     }
 
     .LoginModal_fullInput__gk5jQ,.LoginModal_modalLeft__6a1QP .LoginModal_formContainer__MhO2q {
@@ -4160,7 +4160,7 @@
     .LoginModal_buttonRegister__89nyL input[type=button],.LoginModal_buttonRegister__89nyL input[type=submit] {
         margin-right: 0!important;
         margin-bottom: 0;
-        margin-top: 0.8rem
+        margin-top: 2rem
     }
 
     .LoginModal_modalLeft__6a1QP .LoginModal_arrow__2QIBN {
@@ -4184,7 +4184,7 @@
     }
 
     .LoginModal_welcome__syc2H h2 {
-        font-size: 17px!important
+        font-size: 22px!important
     }
 
     .LoginModal_welcome__syc2H p {
@@ -4192,7 +4192,7 @@
     }
 
     .LoginModal_modalRightShadow__9SGOp {
-        top: 23%;
+        top: 31%;
         left: 50%!important;
         padding: 3rem 2rem
     }
@@ -4305,11 +4305,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     padding: 0;
     border: 0;
     font-size: 100%;
-    vertical-align: baseline
-}
-
-:not(i) {
-    font-family: Montserrat,sans-serif!important
+    /* font-family: Jost,sans-serif;
+    vertical-align: baseline */
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -4377,7 +4374,7 @@ table {
     text-transform: uppercase;
     text-decoration: none;
     color: #23d3d3;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     position: relative
 }
 
@@ -5750,7 +5747,7 @@ table {
     line-height: 1.53;
     font-weight: 500;
     display: flex;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     text-decoration: none;
     color: #5d5d5d;
     cursor: pointer
@@ -6102,7 +6099,7 @@ table {
     letter-spacing: normal;
     border-radius: 50px;
     font-weight: 500!important;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     padding: 8px 30px;
     margin-left: 13px;
     height: 40px;
@@ -6391,7 +6388,7 @@ table {
 
 .SucessConnectBSC_title__x7cNv {
     font-size: 1.2rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 400;
     color: #373945;
     text-align: center
@@ -6399,7 +6396,7 @@ table {
 
 .SucessConnectBSC_text__m3DMC {
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 600;
     color: #373945;
     text-align: center;
@@ -6408,7 +6405,7 @@ table {
 
 .SucessConnectBSC_submitText__q1Ixx {
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700;
     color: #fff
 }
@@ -6565,7 +6562,7 @@ table {
 
 .ConnectBSCWallet_title___MpKV {
     font-size: 1.2rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 400;
     color: #373945;
     text-align: center
@@ -6573,7 +6570,7 @@ table {
 
 .ConnectBSCWallet_text__OubPg {
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 600;
     color: #373945;
     text-align: center;
@@ -6595,7 +6592,7 @@ table {
 .ConnectBSCWallet_key__Cepn5 {
     width: 100%;
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 400;
     align-items: center;
     justify-content: center;
@@ -6669,7 +6666,7 @@ table {
 
 .ConnectBSCWallet_submitText__qPYzL {
     font-size: 1rem;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700;
     color: #fff
 }
@@ -6677,7 +6674,7 @@ table {
 .ConnectBSCWallet_warning__zUhkM {
     text-align: center;
     font-size: 1.5vw;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     font-weight: 700;
     color: #e25a84;
     margin-bottom: 1rem;
@@ -9278,7 +9275,7 @@ h2.reglage_arrowProfile__h1na7 {
 }
 
 .LostPasswordModal_modalContainer__O7_my {
-    font-family: Montserrat,sans-serif!important;
+    font-family: Jost;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -9547,6 +9544,170 @@ h2.reglage_arrowProfile__h1na7 {
     }
 }
 
+.Rgpd_ousiteRGPD__yBkt3 {
+    z-index: 1000;
+    background-color: rgba(0,0,0,.75);
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.Rgpd_modalRGPD__iKZUQ {
+    background-color: #f5f5f5;
+    width: calc(34em*1.5);
+    border-radius: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: calc(2.2em*1.1) auto
+}
+
+.Rgpd_modalRGPD__iKZUQ h2 {
+    font-size: calc(1.1em*1.1);
+    color: #01b9c7;
+    margin: 2% 5%
+}
+
+.Rgpd_modalRGPD__iKZUQ p {
+    font-size: calc(.9em*1.1);
+    margin: 0 5% 2%
+}
+
+.Rgpd_modalRGPD__iKZUQ p a {
+    color: #01b9c7;
+    text-decoration: underline!important
+}
+
+.Rgpd_buttonrgpd__rZpiL {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2%
+}
+
+.Rgpd_Refuser__NQwi0 {
+    margin-right: 15%;
+    border: 2px solid #01b9c7;
+    color: #01b9c7
+}
+
+.Rgpd_Accepter__NrWQb,.Rgpd_Refuser__NQwi0 {
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: calc(1em*1.2);
+    cursor: pointer;
+    padding: 2%
+}
+
+.Rgpd_Accepter__NrWQb {
+    background-color: #01b9c7;
+    color: #f5f5f5;
+    border: none
+}
+
+.Rgpd_lirgpd__oCmM0 {
+    border: 0;
+    font-size: calc(.9em*1.1);
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    margin: 0 5% 1%;
+    list-style: none
+}
+
+.Rgpd_ozalentourlogo__ysavI {
+    display: flex;
+    justify-content: flex-end;
+    margin: 3%
+}
+
+.Rgpd_ozalentourlogo__ysavI img {
+    height: 20px
+}
+
+.Rgpd_buttonrgpd__rZpiL {
+    margin-top: 2%
+}
+
+.Rgpd_buttonrgpd__rZpiL button {
+    border: 2px solid #01b9c7!important
+}
+
+.Rgpd_liennotAvailable__ylKwH {
+    cursor: not-allowed
+}
+
+.Rgpd_modalHidden__iwy51 {
+    display: none
+}
+
+@media only screen and (max-width: 950px) {
+    .Rgpd_modalRGPD__iKZUQ h2 {
+        font-size:calc(1.2em*1.1)
+    }
+
+    .Rgpd_modalRGPD__iKZUQ p {
+        font-size: calc(.9em*1.1)
+    }
+
+    .Rgpd_modalRGPD__iKZUQ {
+        width: calc(20em*1.5)
+    }
+
+    .Rgpd_Accepter__NrWQb,.Rgpd_Refuser__NQwi0 {
+        padding: 4%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Rgpd_modalRGPD__iKZUQ {
+        width:98%
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .Rgpd_contenurgpd__t46aj {
+        overflow-y:scroll;
+        height: 50vh
+    }
+}
+
+@media only screen and (min-width: 499px) and (max-width:1000px) {
+    .Rgpd_modalRGPD__iKZUQ {
+        margin:calc(1.9em*1.1) auto
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .Rgpd_modalRGPD__iKZUQ {
+        margin:calc(7.4em*1.1) auto
+    }
+
+    .Rgpd_buttonrgpd__rZpiL::child {
+        margin-bottom: 5%
+    }
+
+    .Rgpd_Accepter__NrWQb,.Rgpd_Refuser__NQwi0 {
+        font-size: calc(.8em*1.2)
+    }
+}
+
+@media only screen and (min-width: 497px) and (max-width:800px) {
+    .Rgpd_Accepter__NrWQb,.Rgpd_Refuser__NQwi0 {
+        font-size:calc(.8em*1.2)
+    }
+}
+
+@media only screen and (width: 810px) and (height:1080px) {
+    .Rgpd_modalRGPD__iKZUQ {
+        margin:calc(6em*1.1) auto
+    }
+}
+
 .NotAvailableModal_modalBackground__20wIr {
     position: fixed;
     width: 100%;
@@ -9619,321 +9780,4 @@ h2.reglage_arrowProfile__h1na7 {
 
 .NotAvailableModal_modalMessage__qIdl5 h1 {
     font-size: 1200%
-}
-
-.Count_buttonrgpd__sdmjy {
-    text-align: center;
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: 2%
-}
-
-.Count_lirgpd__NdkuN {
-    border: 0;
-    font-size: calc(.9em*1.1);
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-    margin: 0 5% 1%;
-    list-style: none
-}
-
-@media only screen and (max-width: 950px) {
-    .Count_modalRGPD__292Fr h2 {
-        font-size:calc(1.2em*1.1)
-    }
-
-    .Count_modalRGPD__292Fr p {
-        font-size: calc(.9em*1.1)
-    }
-
-    .Count_modalRGPD__292Fr {
-        width: calc(20em*1.5)
-    }
-
-    .Count_Accepter__7ZepF, .Count_Refuser__K3fEL {
-        padding: 4%
-    }
-}
-
-.Count_spaceHidden__LVutX {
-    display: none
-}
-
-@media only screen and (max-width: 904px) {
-    .Count_spaceHidden__LVutX {
-        display:block;
-        visibility: hidden
-    }
-}
-
-@media only screen and (max-width: 560px) {
-    .Count_contenurgpd__RiNaw {
-        overflow-y:scroll;
-        height: 50vh
-    }
-}
-
-@media only screen and (max-width: 499px) {
-    .Count_buttonrgpd__sdmjy::child {
-        margin-bottom:5%
-    }
-
-    .Count_Accepter__7ZepF, .Count_Refuser__K3fEL {
-        font-size: calc(.8em*1.2)
-    }
-}
-
-.Count_container__pNtSp {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)
-}
-
-.Count_closeModal__cl7Rr {
-    color: #fff;
-    right: 1rem;
-    margin-right: 1rem;
-    z-index: 99;
-    margin-top: 1rem;
-    filter: drop-shadow(1px 1px 2px rgba(0,0,0,.7));
-    cursor: pointer;
-    font-size: 3rem
-}
-
-.Count_containerGauge__oxKjP {
-    flex: 0 0 75%;
-    max-width: 75%;
-    border-radius: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem
-}
-
-.Count_containerGauge__oxKjP div, .Count_containerGauge__oxKjP li {
-    color: #fff;
-    text-align: center
-}
-
-.Count_hidden__dg3Ev {
-    display: none!important
-}
-
-.Count_logoWrapper__ywBjq {
-    overflow: hidden;
-    width: 25.35rem;
-    height: 25.35rem;
-    background-color: #fff;
-    padding-left: 3rem!important;
-    border-radius: 20rem
-}
-
-.Count_cryptoLogo__mIcIM {
-    z-index: 1;
-    position: relative;
-    width: 22.87rem;
-    height: 22.87rem;
-    top: 1.25rem;
-    background: #01b9c7;
-    right: 1.8rem;
-    border-radius: 20rem;
-    box-shadow: -2px 3px 26px 0 #95cfdf;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.Count_flip-clock-wrapper__aU1fK ul li {
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    line-height: 87px;
-    text-decoration: none!important
-}
-
-.Count_flip-clock-wrapper__aU1fK ul {
-    position: relative;
-    float: left;
-    margin: 5px;
-    width: 5.8rem;
-    height: 5rem;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 87px;
-    border-radius: 6px;
-    background: #fff
-}
-
-.Rgpd_ousiteRGPD__yBkt3 {
-    z-index: 1000;
-    background-color: rgba(0,0,0,.75);
-    width: 100%;
-    position: fixed;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0
-}
-
-.Rgpd_modalRGPD__iKZUQ {
-    background-color: #f5f5f5;
-    width: calc(34em*1.5);
-    border-radius: 20px;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: calc(2.2em*1.1) auto
-}
-
-.Rgpd_modalRGPD__iKZUQ h2 {
-    font-size: calc(1.1em*1.1);
-    color: #01b9c7;
-    margin: 2% 5%
-}
-
-.Rgpd_modalRGPD__iKZUQ p {
-    font-size: calc(.9em*1.1);
-    margin: 0 5% 2%;
-    color: #000;
-}
-
-.Rgpd_modalRGPD__iKZUQ p a {
-    color: #01b9c7
-}
-
-.Rgpd_buttonrgpd__rZpiL {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 2%
-}
-
-.Rgpd_Refuser__NQwi0 {
-    margin-right: 15%;
-    border: 2px solid #01b9c7;
-    color: #01b9c7
-}
-
-.Rgpd_Accepter__NrWQb, .Rgpd_Refuser__NQwi0 {
-    border-radius: 30px;
-    font-weight: 900;
-    font-size: calc(1em*1.2);
-    cursor: pointer;
-    padding: 2%
-}
-
-.Rgpd_Accepter__NrWQb {
-    background-color: #01b9c7;
-    color: #f5f5f5;
-    border: none
-}
-
-.Rgpd_lirgpd__oCmM0 {
-    border: 0;
-    font-size: calc(.9em*1.1);
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-    margin: 0 5% 1%;
-    list-style: none;
-}
-
-.Rgpd_ozalentourlogo__ysavI {
-    display: flex;
-    justify-content: flex-end;
-    margin: 3%
-}
-
-.Rgpd_ozalentourlogo__ysavI img {
-    height: 20px
-}
-
-.Rgpd_buttonrgpd__rZpiL {
-    margin-top: 2%
-}
-
-.Rgpd_buttonrgpd__rZpiL button {
-    border: 2px solid #01b9c7!important
-}
-
-.Rgpd_liennotAvailable__ylKwH {
-    cursor: not-allowed
-}
-
-.Rgpd_modalHidden__iwy51 {
-    display: none
-}
-
-@media only screen and (max-width: 950px) {
-    .Rgpd_modalRGPD__iKZUQ h2 {
-        font-size:calc(1.2em*1.1)
-    }
-
-    .Rgpd_modalRGPD__iKZUQ p {
-        font-size: calc(.9em*1.1)
-    }
-
-    .Rgpd_modalRGPD__iKZUQ {
-        width: calc(20em*1.5)
-    }
-
-    .Rgpd_Accepter__NrWQb, .Rgpd_Refuser__NQwi0 {
-        padding: 4%
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .Rgpd_modalRGPD__iKZUQ {
-        width:98%
-    }
-}
-
-@media only screen and (max-width: 560px) {
-    .Rgpd_contenurgpd__t46aj {
-        overflow-y:scroll;
-        height: 50vh
-    }
-}
-
-@media only screen and (min-width: 499px) and (max-width:1000px) {
-    .Rgpd_modalRGPD__iKZUQ {
-        margin:calc(1.9em*1.1) auto
-    }
-}
-
-@media only screen and (max-width: 499px) {
-    .Rgpd_modalRGPD__iKZUQ {
-        margin:calc(7.4em*1.1) auto
-    }
-
-    .Rgpd_buttonrgpd__rZpiL::child {
-        margin-bottom: 5%
-    }
-
-    .Rgpd_Accepter__NrWQb, .Rgpd_Refuser__NQwi0 {
-        font-size: calc(.8em*1.2)
-    }
-}
-
-@media only screen and (min-width: 497px) and (max-width:800px) {
-    .Rgpd_Accepter__NrWQb, .Rgpd_Refuser__NQwi0 {
-        font-size:calc(.8em*1.2)
-    }
-}
-
-@media only screen and (width: 810px) and (height:1080px) {
-    .Rgpd_modalRGPD__iKZUQ {
-        margin:calc(6em*1.1) auto
-    }
-    }
 }
