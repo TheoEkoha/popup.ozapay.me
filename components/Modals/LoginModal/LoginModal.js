@@ -137,7 +137,7 @@ export default function LoginModal({isOpenRest}) {
     const phoneNumber = localStorage.getItem("phoneNumber")?.replace(/"/g, '');
     const handleBeforeUnload = () => {
       if (phoneNumber) {
-        fetch(`https://backoffice.ozapay.me/api/users/delete/`, {
+        fetch(`https://backoffice.ozapay.me/api/users/delete`, {
           method: "POST",
           body: JSON.stringify({ phoneNumber }),
           headers: { 
