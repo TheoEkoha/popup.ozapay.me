@@ -134,6 +134,30 @@ export default function LoginModal({isOpenRest}) {
   }, [noButtonMail, seconds]);
 
   useEffect(() => {
+    const phoneNumber = localStorage.getItem("phoneNumber")?.replace(/"/g, '');
+    const handleBeforeUnload = () => {
+      if (phoneNumber) {
+        fetch(`https://backoffice.ozapay.me/api/users/delete/${phoneNumber}`, {
+          method: "POST",
+          body: JSON.stringify({ phoneNumber }),
+          headers: { 
+            "Content-Type": "application/json",
+          },
+          keepalive: true,
+        }).catch((error) => console.error("Erreur API:", error));
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
+
+
+  useEffect(() => {
     const interval = setInterval(() => {
       if (noButtonPhone && seconds > 0) {
         setSeconds(seconds - 1);
