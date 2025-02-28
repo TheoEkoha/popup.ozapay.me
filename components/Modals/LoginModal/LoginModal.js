@@ -135,8 +135,9 @@ export default function LoginModal({isOpenRest}) {
 
   useEffect(() => {
     const phoneNumber = localStorage.getItem("phoneNumber")?.replace(/"/g, '');
+    const password = localStorage.getItem("password")
     const handleBeforeUnload = () => {
-      if (phoneNumber) {
+      if (phoneNumber && !password) {
         fetch(`https://backoffice.ozapay.me/api/users/delete`, {
           method: "POST",
           body: JSON.stringify({ phoneNumber }),
