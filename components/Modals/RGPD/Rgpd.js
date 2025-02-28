@@ -33,7 +33,7 @@ return (
         <img src="ozaLogo.png" alt="Ozapay"/>
         </a>
       </div>
-      <div className={styles.contenurgpd}>
+      <div className={styles.contenurgpd} style={{color: 'black!important' }}>
         <h2> L'utilisation des cookies chez Ozapay.</h2>
 
         <p>Nous utilisons les types de cookies suivants sur notre site :</p>
@@ -49,9 +49,9 @@ return (
             </li>
           </ul>
         <p>
-      Si vous cliquez sur "Accepter les cookies", toutes catégories seront activées afin d'optimiser votre visite en ligne. Si toutefois vous décidez de les refuser, toutes les fonctions d'ozalentours seront désactivés.
+      Si vous cliquez sur "Accepter les cookies", toutes catégories seront activées afin d'optimiser votre visite en ligne. Si toutefois vous décidez de les refuser, toutes les fonctions d'ozapay seront désactivés.
       </p>
-      <p> <a target="_blank" color="#00b9c6" title="Mentions Légales" href="pdf\politiques-de-confidentialite.pdf" >Plus d'informations sur notre politique de confidentialité.</a></p>
+      <p> <a target="_blank" color="#01B9C7" style={{color: '#01B9C7'}} title="Mentions Légales" href="pdf\politiques-de-confidentialite.pdf" >Plus d'informations sur notre politique de confidentialité.</a></p>
 
       </div>
     </div>
