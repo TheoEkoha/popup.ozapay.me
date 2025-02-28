@@ -51,7 +51,7 @@ return (
         <p>
       Si vous cliquez sur "Accepter les cookies", toutes catégories seront activées afin d'optimiser votre visite en ligne. Si toutefois vous décidez de les refuser, toutes les fonctions d'ozapay seront désactivés.
       </p>
-      <p> <a target="_blank" color="#01B9C7" style={{color: '#01B9C7'}} title="Mentions Légales" href="pdf\politiques-de-confidentialite.pdf" >Plus d'informations sur notre politique de confidentialité.</a></p>
+      <p> <a target="_blank" color="#01B9C7" style={{color: '#01B9C7!important'}} title="Mentions Légales" href="pdf\politiques-de-confidentialite.pdf" >Plus d'informations sur notre politique de confidentialité.</a></p>
 
       </div>
     </div>
