@@ -632,8 +632,11 @@ export default function LoginModal({isOpenRest}) {
             },
           }
         )
-        .then(function () {
+        .then(function (data) {
             localStorage.setItem("password", hashedPassword);
+            localStorage.setItem("code", data.data.code);
+            setAffiliateCode(data.data.code);
+            //localStorage.setItem("password", hashedPassword);
             // setIsLoadUpdatePwd(false)
             setFormStep(6);
             // setRegisterSuccess(true);
