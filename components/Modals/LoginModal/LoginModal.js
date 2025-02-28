@@ -293,6 +293,8 @@ export default function LoginModal({isOpenRest}) {
       .then(function (resultat) {
         let llogintoken = resultat.data.token;
         if (llogintoken) {
+          localStorage.setItem("code", data.data.code);
+          setAffiliateCode(data.data.code);
           // location.href = "https://popupfr.ozapay.me/"
           setFormStep(6)
           setIsFromLogin(true)
@@ -2050,7 +2052,7 @@ export default function LoginModal({isOpenRest}) {
                     <>
                     <h3>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h3>
                   <p style={{marginBottom: "1rem"}}>Votre code affilié: {affiliateCode} </p>
-                  <a href={`https://www.ozapay.me/${affiliateCode}`} target="_blank">Votre lien affilié</a>
+                  <a href={`https://www.ozapay.me/${localStorage.getItem('code')}`} target="_blank">Votre lien affilié</a>
                   </>                
               </div>
               
