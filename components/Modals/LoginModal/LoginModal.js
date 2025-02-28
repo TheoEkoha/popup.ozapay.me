@@ -2044,9 +2044,13 @@ export default function LoginModal({isOpenRest}) {
                 <br/>
                 <br/>
                 <br/>
-                <h2>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h2>
-                <p style={{marginBottom: "1rem"}}>Votre code affilié: {affiliateCode} </p>
-                
+                    <>
+                    <h3>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h3>
+                  <p style={{marginBottom: "1rem"}}><a href={`www.ozapay.me/${affiliateCode}`} target="_blank">
+                  Votre code affilié: {affiliateCode} 
+                  </a>
+                  </p>
+                  </>                
               </div>
               
             </div>
@@ -2227,8 +2231,7 @@ export default function LoginModal({isOpenRest}) {
               <h2>Incription terminée</h2>
               <p>Bravo, vous venez d'ouvrir votre compte !</p>
               <p>
-                Connectez vous dès maintenant pour profiter de toute
-                l'expérience Ozapay.
+                Connectez vous pour profiter de toute l'expérience Ozapay.
               </p>
               <div className={styles.buttonContainer}>
                 <button
