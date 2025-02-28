@@ -2046,10 +2046,8 @@ export default function LoginModal({isOpenRest}) {
                 <br/>
                     <>
                     <h3>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h3>
-                  <p style={{marginBottom: "1rem"}}><a href={`www.ozapay.me/${affiliateCode}`} target="_blank">
-                  Votre code affilié: {affiliateCode} 
-                  </a>
-                  </p>
+                  <p style={{marginBottom: "1rem"}}>Votre code affilié: {affiliateCode} </p>
+                  <a href={`www.ozapay.me/${affiliateCode}`} target="_blank">Votre lien affilié</a>
                   </>                
               </div>
               
