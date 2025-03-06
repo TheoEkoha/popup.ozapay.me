@@ -46,8 +46,7 @@ export default function Home() {
     <div>
       <Head>
       <title>
-        Ozapay - Une Super App, un Compte et des Cryptos sous votre propre
-        détention !
+        Ozapay - Une Super App, un Compte et des Cryptos sous auto-détention !
       </title>
   <meta
     name="description"
@@ -126,12 +125,12 @@ export default function Home() {
         <div
           className="progress-bar"
           role="progressbar"
-          aria-valuenow="65"
+          aria-valuenow="71"
           aria-valuemin="0"
           aria-valuemax="100"
-          style={{ width: "70%" }}
+          style={{ width: "71%" }}
         >
-          <span>70 % Terminé</span>
+          <span>71 % Terminé</span>
         </div>
       </div>
       <div className="animation-container">
@@ -155,7 +154,7 @@ export default function Home() {
             </h1>
             <p className="row text-center bounceInUp animated discover">
               <b>Une Super App</b>, <b>un Compte</b> et des{" "}
-              <b>cryptos</b><br /> <b>sous votre propre détention</b> !
+              <b>cryptos sous votre propre détention</b> !
             </p>
           </div>
         </header>
@@ -182,7 +181,7 @@ export default function Home() {
             </a>
           </Link>
           <Link
-            href="https://solsale.app/presale/all"
+            href="https://solsale.app/presale/8NoVX6en3MDS9Bq2BvmcyxTo4PFEeBTD6mf2fKbKvtYm"
             passHref
           >
             <a
@@ -201,7 +200,7 @@ export default function Home() {
         </div>
 
         <div className="migrateContainer">
-          <Link href="/pdf/whitepaper_fr_2024.pdf" passHref>
+          <Link href="/pdf/whitepaper_fr_2025.pdf" passHref>
             <a
               style={{ marginBottom: "1.5rem", fontSize: "16px" }}
               className="migrate"
@@ -266,7 +265,7 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
-			<p style={{ fontSize: "14px" }}>CA 67iVSrbgQKiPjttU9uXx9CXUoS1Si3XUhrXeiNAUUZSR</p>
+			<p style={{ fontSize: "75%" }}>CA 67iVSrbgQKiPjttU9uXx9CXUoS1Si3XUhrXeiNAUUZSR</p>
           </div>
         </section>
         <div className="elfsight-app-99cf8e87-e8d3-47f8-9066-3e6545998e8f" data-elfsight-app-lazy></div>

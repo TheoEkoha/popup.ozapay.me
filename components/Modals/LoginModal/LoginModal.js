@@ -293,8 +293,6 @@ export default function LoginModal({isOpenRest}) {
       .then(function (resultat) {
         let llogintoken = resultat.data.token;
         if (llogintoken) {
-          localStorage.setItem("code", data.data.code);
-          setAffiliateCode(data.data.code);
           // location.href = "https://popupfr.ozapay.me/"
           setFormStep(6)
           setIsFromLogin(true)
@@ -353,9 +351,9 @@ export default function LoginModal({isOpenRest}) {
 
       const handleAxiosError = (error) => {
         if (error.response?.data?.detail === "EMAIL_ALREADY_EXIST") {
-          setEmailResponseError('L\'email existe déjà')
+          setEmailResponseError('Cet email existe déjà.')
         } else {
-          setPhoneResponseError("Une erreur est survenue.");
+          setPhoneResponseError("Ce numéro de téléphone existe déjà.");
         }
       };
 
@@ -780,7 +778,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Pas encore inscrit ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -906,7 +904,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous souhaitez nous rejoindre ?</p>
+                  <p>Pas encore inscrit ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -1006,7 +1004,7 @@ export default function LoginModal({isOpenRest}) {
                             placeholder={"Nom du titulaire du compte"}
                             {...registerUserInfos("lastName", {
                               required: true,
-                              pattern: onlyLettersRegex, // validation rule to allow only letters
+                              pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s-]+$/, // validation rule to allow only letters
                             })}
                           />
                           {errorsRegisterUserInfos.lastName && (
@@ -1029,7 +1027,7 @@ export default function LoginModal({isOpenRest}) {
                             placeholder={"Prénom"}
                             {...registerUserInfos("firstName", {
                               required: true,
-                              pattern: onlyLettersRegex, // validation rule to allow only letters
+                              pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s-]+$/, // validation rule to allow only letters
                             })}
                           />
                           {errorsRegisterUserInfos.firstName && (
@@ -1171,7 +1169,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -1216,7 +1214,7 @@ export default function LoginModal({isOpenRest}) {
                             placeholder={"Nom du titulaire du compte"}
                             {...registerUserInfos("lastName", {
                               required: true,
-                              pattern: onlyLettersRegex, // validation rule to allow only letters
+                              pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s-]+$/, // validation rule to allow only letters
                             })}
                           />
                           {errorsRegisterUserInfos.lastName && (
@@ -1239,7 +1237,7 @@ export default function LoginModal({isOpenRest}) {
                             placeholder={"Prénom"}
                             {...registerUserInfos("firstName", {
                               required: true,
-                              pattern: onlyLettersRegex, // validation rule to allow only letters
+                              pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s-]+$/, // validation rule to allow only letters
                             })}
                           />
                           {errorsRegisterUserInfos.firstName && (
@@ -1382,7 +1380,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -1515,7 +1513,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -1860,7 +1858,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -1991,11 +1989,11 @@ export default function LoginModal({isOpenRest}) {
                   <img src="ozaLogo.png" />
                 </div>
                 <div className={styles.welcome}>
-                  <h2>Merci, vous pouvez maintenant essayer notre super application !</h2>
-<p>Téléchargez Ozapay, activez votre portefeuille crypto, récupérez vos 50 OZA et restez à l'affut des nouvelles mises à jour !</p>
+                  <h2>Merci, vous pouvez maintenant essayer notre version Alpha Test !</h2>
+<p>Téléchargez Ozapay, activez votre portefeuille crypto et récupérez 50 OZA !</p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -2019,7 +2017,7 @@ export default function LoginModal({isOpenRest}) {
                 <div className={styles.progressBar}>
                   <div className={styles.progressFifthStep}></div>
                 </div>
-                <h2>Bravo, votre demande d'ouverture de compte est bien prise en compte !  </h2>
+                <h2>Bravo, vous venez de pré-ouvrir votre compte Ozapay !</h2>
                 <p style={{marginBottom: "1rem"}}>Un email de confirmation vient d'être envoyé</p>
                 <div className={styles.storeButtons}>
                 <a href="https://cutt.ly/Mrq2DyXa"  className={styles.boxSocialMedia} download>
@@ -2035,7 +2033,7 @@ export default function LoginModal({isOpenRest}) {
                   </div>
                 </a>
               </div>
-              <a href="https://phantom.com/" className={styles.phandomLink}>ou Téléchargez l'application Phantom</a>
+              <a href="https://phantom.com/" className={styles.phandomLink}>ou essayez notre jeton OZA via l'application Phantom</a>
 
                 <div className={styles.buttonRegister}>
                   {!isFromLogin && <input
@@ -2052,7 +2050,7 @@ export default function LoginModal({isOpenRest}) {
                     <>
                     <h3>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h3>
                   <p style={{marginBottom: "1rem"}}>Votre code affilié: {affiliateCode} </p>
-                  <a href={`https://www.ozapay.me/${localStorage.getItem('code')}`} target="_blank">Votre lien affilié</a>
+                  <a href={`https://www.ozapay.me/${affiliateCode}`} target="_blank">Votre lien affilié</a>
                   </>                
               </div>
               
@@ -2076,7 +2074,7 @@ export default function LoginModal({isOpenRest}) {
                   <h2>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant</h2>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {
@@ -2160,7 +2158,7 @@ export default function LoginModal({isOpenRest}) {
                   </p>
                 </div>
                 <div className={styles.bottomShadow}>
-                  <p>Vous avez déjà un compte chez nous ?</p>
+                  <p>Déjà un compte ?</p>
                   <p
                     className={styles.registerText}
                     onClick={() => {

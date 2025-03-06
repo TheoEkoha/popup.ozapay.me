@@ -50,7 +50,7 @@ export default function Header({ children }) {
     <>
       <div className={styles.headerContainer}>
         <div className={styles.logo}>
-          <a  href="https://fr.ozalentour.com/">
+          <a  href="https://fr.ozapay.me/">
             <img src="/ozaLogo.png" alt="logo" />
           </a>
         </div>

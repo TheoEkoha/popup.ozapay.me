@@ -40,7 +40,8 @@
    }
    .discover{
      color: #fff;	
-     font-size: 22px;
+	 max-width: 45rem;
+     font-size: 21px;
      line-height: 2rem;
      margin-bottom: 1rem;
        
@@ -2330,9 +2331,10 @@
    }
        .discover{
      color: #fff;	
-     font-size: 15px;
+     font-size: 14px;
      line-height: 2rem;
      margin-bottom: 1rem;
+	 max-width: 45rem;
    }
    .top-header { margin: 0.9em 0 0em; }
     .buttonBuyContainer{
@@ -2396,7 +2398,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 20px;
+	 max-width: 45rem;
+     font-size: 19px;
      line-height: 2rem;
      margin-bottom: 1rem;
    }
@@ -2416,7 +2419,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 17px;
+	 max-width: 45rem;
+     font-size: 16px;
      line-height: 2rem
      margin-bottom: 1rem;
    }
@@ -2436,7 +2440,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 18px;
+	 max-width: 45rem;
+     font-size: 17px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2493,8 +2498,9 @@
          margin-bottom: 0.7rem;
    }
        .discover{
-     color: #fff;	
-     font-size: 18px;
+     color: #fff;
+max-width: 45rem;	 
+     font-size: 17px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2552,7 +2558,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 19px;
+	 max-width: 45rem;
+     font-size: 18px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2610,7 +2617,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 20px;
+     font-size: 19px;
+	 max-width: 45rem;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2630,7 +2638,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 21px;
+	 max-width: 45rem;
+     font-size: 20px;
       line-height: 2.3rem;
              margin-bottom: 1rem;
    }
@@ -2688,7 +2697,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 29px;
+	 max-width: 45rem;
+     font-size: 28px;
              margin-bottom: 1rem;
            line-height: 2.9rem;
    }
@@ -2746,6 +2756,7 @@
    }
        .discover{
      color: #fff;	
+	 max-width: 45rem;
      line-height: 3rem;
              margin-bottom: 1.5rem;
    }
@@ -2817,7 +2828,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 33px;
+	 max-width: 45rem;
+     font-size: 32px;
      line-height: 3rem;
              margin-bottom: 2rem;
    }
@@ -2876,7 +2888,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 33px;
+	 max-width: 45rem;
+     font-size: 32px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2933,7 +2946,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 33px;
+	 max-width: 45rem;
+     font-size: 32px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -2991,7 +3005,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 33px;
+	 max-width: 45rem;
+     font-size: 32px;
      line-height: 2rem;
              margin-bottom: 1rem;
    }
@@ -3049,7 +3064,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 33px;
+	 max-width: 45rem;
+     font-size: 32px;
      line-height: 3rem;
              margin-bottom: 1rem;
    }
@@ -3105,7 +3121,8 @@
    }
        .discover{
      color: #fff;	
-     font-size: 34px;
+	 max-width: 45rem;
+     font-size: 33px;
      line-height: 3rem;
              margin-bottom: 1rem;
    }
