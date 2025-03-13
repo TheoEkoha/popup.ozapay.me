@@ -99,6 +99,8 @@ export default function LoginModal({isOpenRest}) {
   const [expriredPwdErr, setExpriredPwdErr] = useState(false)
   const [textResendMail, setTextResendMail] = useState(false)
   const [textResendPhone, setTextResendPhone] = useState(false)
+  const [captchaSmsValidate, setCaptchaSmsValidate] = useState(false)
+  const [captchaEmailValidate, setCaptchaEmailValidate] = useState(false)
 
   useEffect(() => {
     if (isOpenReset) {
@@ -748,6 +750,52 @@ export default function LoginModal({isOpenRest}) {
         console.log(error);
       });
   };
+
+
+  const handleSubmitCaptcha = async (e) => {
+    e.preventDefault();
+    console.log("handleSubmitCaptcha appelé captchaEmailValidate->", captchaEmailValidate);
+    console.log("handleSubmitCaptcha appelé captchaSmsValidate  ->", captchaSmsValidate);
+
+
+    // Récupérer le token du captcha
+    const token = await recaptchaRef.current.getValue();
+
+    if (!token) {
+      alert('Veuillez compléter le captcha.');
+      return;
+    }
+
+    // Envoyer le token à votre backend pour validation
+    const response = await fetch('/api/validate-captcha', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token }),
+    });
+
+    const result = await response.json();
+    console.log("RESPONSE -> ", result);
+    console.log("captchaSmsValidate -> ", captchaSmsValidate);
+    if (result.success) {
+      // Captcha validé, soumettre le formulaire
+      setCaptchaSmsValidate(true);
+//      await onSubmitResendCodeSMS();
+    } else {
+      alert('Captcha invalide. Veuillez réessayer.');
+    }
+  };
+
+  console.log("captchaSmsValidatecaptchaSmsValidatecaptchaSmsValidatecaptchaSmsValidate", captchaSmsValidate)
+  useEffect(() => {
+    if (captchaSmsValidate) {
+      console.log("captchaSmsValidate est mis à TRUE ailleurs !");
+    }
+    console.log('captchaSmsValidate:', captchaSmsValidate); // Affichez la valeur dans la console
+    console.log('captchaEmailValidate:', captchaEmailValidate); // Affichez la valeur dans la console
+
+  }, [captchaEmailValidate, captchaSmsValidate])
   const onlyLettersRegex = /^[A-Za-z]+$/; // regular expression pattern to match only letters
   return (
     <>
@@ -1608,6 +1656,14 @@ export default function LoginModal({isOpenRest}) {
                         </div>
                       ) : null}
                     </div>
+                    
+                    <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw"
+                      />
+                       <input onClick={(e) => handleSubmitCaptcha(e)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                       </div>
                     <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                       <input
                         type="button"
@@ -1616,8 +1672,10 @@ export default function LoginModal({isOpenRest}) {
                         value="Précédent"
                       />
                       <input
+                      disabled={!captchaEmailValidate}
                         type="submit"
                         value="Étape suivante"
+                        style={!captchaEmailValidate ? { pointerEvents: "none", opacity: 0.5 } : {}}
                       />
                     </div>
                   </form>
@@ -1650,6 +1708,8 @@ export default function LoginModal({isOpenRest}) {
                         ) : null}
                       </div>
                       <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
+
+                     
                           <input
                             type="button"
                             onClick={() => setIsEmailSend(false)}
@@ -1660,6 +1720,7 @@ export default function LoginModal({isOpenRest}) {
                               sucessCodeEmailEntered ?
                               <input
                                 type="button"
+                                disabled={captchaEmailValidate}
                                 value="Étape suivante"
                                 onClick={() => {handleButtonClick3(); setNoButtonMail(false); setIsSecret(true);}}
                               />
@@ -1696,7 +1757,7 @@ export default function LoginModal({isOpenRest}) {
                   }
                 >
                   {
-                    !isSMSSend ?
+                    !isSMSSend ? (
                       <form
                         className={styles.formContainer}
                         onSubmit={handleSubmitRegisterPhone(onSubmitRegisterPhone)}
@@ -1756,6 +1817,10 @@ export default function LoginModal({isOpenRest}) {
                             : ''
                           }
                         </div>
+                        <div style={{marginTop: '40px'}}>
+                          <ReCAPTCHA ref={recaptchaRef} sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw" />
+                       <input onClick={(e) => handleSubmitCaptcha(e)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                    </div>
                         <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                           <input
                             type="button"
@@ -1764,11 +1829,14 @@ export default function LoginModal({isOpenRest}) {
                             value="Précédent"
                           />
                           <input
+                          disabled={!captchaSmsValidate}
                             type="submit"
+                            style={!captchaSmsValidate ? { pointerEvents: "none", opacity: 0.5 } : {}}
                             value="Étape suivante"
                           />
                         </div>
                       </form>
+                    )
                     :
                     <div className={styles.oneInput}>
                       <div>
