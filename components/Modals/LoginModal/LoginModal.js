@@ -102,6 +102,30 @@ export default function LoginModal({isOpenRest}) {
   const [textResendPhone, setTextResendPhone] = useState(false)
   const [captchaSmsValidate, setCaptchaSmsValidate] = useState(false)
   const [captchaEmailValidate, setCaptchaEmailValidate] = useState(false)
+  const [catpchaResolvedSms, setCaptchaResolvedSms] = useState(false)
+  const [catpchaResolvedEmail, setCaptchaResolvedEmail] = useState(false)
+
+   // Cette fonction est appelée lorsque le CAPTCHA est résolu
+   const handleCaptchaChangeSms =   async (value) => {
+    if (value) {
+      setCaptchaResolvedSms(true);  // Met la variable à true quand le CAPTCHA est résolu
+      await handleSubmitCaptcha(recaptchaRef, null, false);
+    } else {
+      setCaptchaResolvedSms(false); // Met la variable à false si le CAPTCHA est réinitialisé
+    }
+  };
+
+     // Cette fonction est appelée lorsque le CAPTCHA est résolu
+     const handleCaptchaChangeEmail = async (value) => {
+      if (value) {
+        setCaptchaResolvedEmail(true);  // Met la variable à true quand le CAPTCHA est résolu
+        await handleSubmitCaptcha(recaptchaRefMail, null, true);
+      } else {
+        setCaptchaResolvedEmail(false); // Met la variable à false si le CAPTCHA est réinitialisé
+      }
+    };
+  
+
 
   useEffect(() => {
     if (isOpenReset) {
@@ -753,7 +777,7 @@ export default function LoginModal({isOpenRest}) {
 
 
   const handleSubmitCaptcha = async (recaptchaRef, e, isMail) => {
-    e.preventDefault();
+    //e.preventDefault();
     // Récupérer le token du captcha
     const token = await recaptchaRef.current.getValue();
 
@@ -1650,8 +1674,9 @@ export default function LoginModal({isOpenRest}) {
                     <ReCAPTCHA
                         ref={recaptchaRefMail}
                         sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw"
+                        onChange={handleCaptchaChangeEmail}
                       />
-                       <input onClick={(e) => handleSubmitCaptcha(recaptchaRefMail, e, true)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                       
                        </div>
                     <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                       <input
@@ -1806,8 +1831,7 @@ export default function LoginModal({isOpenRest}) {
                           }
                         </div>
                         <div style={{marginTop: '40px'}}>
-                          <ReCAPTCHA ref={recaptchaRef} sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw" />
-                       <input onClick={(e) => handleSubmitCaptcha(recaptchaRef, e, false)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                          <ReCAPTCHA onChange={handleCaptchaChangeSms} ref={recaptchaRef} sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw" />
                     </div>
                         <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                           <input
