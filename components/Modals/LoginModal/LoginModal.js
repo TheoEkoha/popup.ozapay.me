@@ -2124,14 +2124,7 @@ export default function LoginModal({isOpenRest}) {
                   />}
                   <input type="button" onClick={createUser} value="Terminer" />
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                    <>
-                    <h3>Rejoignez notre programme d'affiliation et commencez à gagner de l'argent dès maintenant !</h3>
-                  <p style={{marginBottom: "1rem"}}>Votre code affilié: {affiliateCode} </p>
-                  <a href={`https://www.ozapay.me/${affiliateCode}`} target="_blank">Votre lien affilié</a>
-                  </>                
+                
               </div>
               
             </div>
