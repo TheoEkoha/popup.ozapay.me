@@ -1,10 +1,12 @@
+const secret = process.env.NEXT_SECRET_CAPTCHA
+
 export default async function handler(req, res) {
     if (req.method === 'POST') {
       const { token } = req.body;
   
       // Valider le token avec l'API de reCAPTCHA
       const response = await fetch(
-        `https://www.google.com/recaptcha/api/siteverify?secret=6LfMsvIqAAAAAH2h4sqJcbBP4-RTHPQhcI8m-zar&response=${token}`,
+        `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
         {
           method: 'POST',
         }

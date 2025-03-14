@@ -47,6 +47,7 @@ export default function LoginModal({isOpenRest}) {
   }, [isFromLandingPage])
 
   const recaptchaRef = useRef(null);
+  const recaptchaRefMail = useRef(null);
   const [formStep, setFormStep] = useState(0); // initial state 0 but need be 3 because need to fit with landing page changes
   const [registerData, setRegisterData] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -269,7 +270,6 @@ export default function LoginModal({isOpenRest}) {
     setSelectedInterest(interestNumber);
     const interest = interestText[interestNumber];
     const test = localStorage.setItem("interest", interest);
-    console.log(test);
   };
 
   // We get user email and password from the login form and perform a request to obtain a json web token
@@ -752,12 +752,8 @@ export default function LoginModal({isOpenRest}) {
   };
 
 
-  const handleSubmitCaptcha = async (e) => {
+  const handleSubmitCaptcha = async (recaptchaRef, e, isMail) => {
     e.preventDefault();
-    console.log("handleSubmitCaptcha appelé captchaEmailValidate->", captchaEmailValidate);
-    console.log("handleSubmitCaptcha appelé captchaSmsValidate  ->", captchaSmsValidate);
-
-
     // Récupérer le token du captcha
     const token = await recaptchaRef.current.getValue();
 
@@ -776,26 +772,19 @@ export default function LoginModal({isOpenRest}) {
     });
 
     const result = await response.json();
-    console.log("RESPONSE -> ", result);
-    console.log("captchaSmsValidate -> ", captchaSmsValidate);
     if (result.success) {
       // Captcha validé, soumettre le formulaire
-      setCaptchaSmsValidate(true);
+      if (isMail)
+        setCaptchaEmailValidate(true);
+      else
+        setCaptchaSmsValidate(true);
 //      await onSubmitResendCodeSMS();
     } else {
       alert('Captcha invalide. Veuillez réessayer.');
     }
   };
 
-  console.log("captchaSmsValidatecaptchaSmsValidatecaptchaSmsValidatecaptchaSmsValidate", captchaSmsValidate)
-  useEffect(() => {
-    if (captchaSmsValidate) {
-      console.log("captchaSmsValidate est mis à TRUE ailleurs !");
-    }
-    console.log('captchaSmsValidate:', captchaSmsValidate); // Affichez la valeur dans la console
-    console.log('captchaEmailValidate:', captchaEmailValidate); // Affichez la valeur dans la console
-
-  }, [captchaEmailValidate, captchaSmsValidate])
+ 
   const onlyLettersRegex = /^[A-Za-z]+$/; // regular expression pattern to match only letters
   return (
     <>
@@ -1657,12 +1646,12 @@ export default function LoginModal({isOpenRest}) {
                       ) : null}
                     </div>
                     
-                    <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
+                    <div style={{marginTop: '40px'}}>
                     <ReCAPTCHA
-                        ref={recaptchaRef}
+                        ref={recaptchaRefMail}
                         sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw"
                       />
-                       <input onClick={(e) => handleSubmitCaptcha(e)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                       <input onClick={(e) => handleSubmitCaptcha(recaptchaRefMail, e, true)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
                        </div>
                     <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                       <input
@@ -1720,7 +1709,6 @@ export default function LoginModal({isOpenRest}) {
                               sucessCodeEmailEntered ?
                               <input
                                 type="button"
-                                disabled={captchaEmailValidate}
                                 value="Étape suivante"
                                 onClick={() => {handleButtonClick3(); setNoButtonMail(false); setIsSecret(true);}}
                               />
@@ -1819,7 +1807,7 @@ export default function LoginModal({isOpenRest}) {
                         </div>
                         <div style={{marginTop: '40px'}}>
                           <ReCAPTCHA ref={recaptchaRef} sitekey="6LfMsvIqAAAAAKcLMHH6ojVAXKY49VIDgg8sLyFw" />
-                       <input onClick={(e) => handleSubmitCaptcha(e)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
+                       <input onClick={(e) => handleSubmitCaptcha(recaptchaRef, e, false)} style={{marginTop: '40px', color: 'white', width: '50%', background: '#17bfcc'}} value="Envoyer" type="submit"></input>
                     </div>
                         <div style={{marginTop: '40px'}} className={styles.buttonRegister}>
                           <input
