@@ -376,7 +376,7 @@ export default function LoginModal({isOpenRest}) {
     setEmailResponseError('')
 
       const handleAxiosError = (error) => {
-        if (error.response?.data?.detail === "EMAIL_ALREADY_EXIST") {
+        if (error.response?.data?.detail.includes('_uindex')) {
           setEmailResponseError('Cet email existe déjà.')
         } else {
           setPhoneResponseError("Ce numéro de téléphone existe déjà.");
