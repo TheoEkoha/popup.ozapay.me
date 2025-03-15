@@ -493,7 +493,7 @@ export default function LoginModal({isOpenRest}) {
     const allowedIndicatifs = ["+225", "+234", "+241", "+229"];
     if (!allowedIndicatifs.includes(indicatif)) {
       const handleAxiosError = (error) => {
-        if (error.response?.data?.detail === "PHONE_ALREADY_EXIST") {
+        if (error.response?.data?.detail.includes('user_phone_uindex')) {
           setPhoneResponseError("Ce numéro existe déjà.");
         } else {
           setPhoneResponseError("Une erreur est survenue.");
