@@ -465,7 +465,7 @@ export default function LoginModal({isOpenRest}) {
             for: "SIGN_UP_VER"
           },
           {
-            //withCredentials: true,
+            withCredentials: true,
             headers: {
               "Content-Type": "application/json; charset=UTF-8",
             },
@@ -556,7 +556,7 @@ export default function LoginModal({isOpenRest}) {
             for: "SIGN_UP_VER"
           },
           {
-            //withCredentials: true,
+            withCredentials: true,
             headers: {
               "Content-Type": "application/json; charset=UTF-8",
             },
@@ -565,6 +565,19 @@ export default function LoginModal({isOpenRest}) {
         .then(function (response) {
           setIsLoadCheckCode(false)
           setIsPhoneCodeValid(true);
+        }).catch((error) => {
+          setIsLoadCheckCode(false);
+          console.error('Erreur lors de la vérification du code:', error);
+          if (error.response) {
+            // Réponse d'erreur du serveur
+            console.error('Erreur de serveur:', error.response.data);
+          } else if (error.request) {
+            // La requête a été envoyée mais il n'y a pas de réponse
+            console.error('Pas de réponse du serveur:', error.request);
+          } else {
+            // Autre erreur
+            console.error('Erreur:', error.message);
+          }
         });
     }
   }, [phoneCode]);
